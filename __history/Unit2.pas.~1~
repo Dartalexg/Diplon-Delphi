@@ -1,0 +1,67 @@
+unit Unit1;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DB, Data.Win.ADODB;
+
+type
+  TDm1 = class(TDataModule)
+    ADOConnection1: TADOConnection;
+    ADOQuery1: TADOQuery;
+    ADOQuery2: TADOQuery;
+    ADOQuery3: TADOQuery;
+    ADOQuery4: TADOQuery;
+    ADOQuery5: TADOQuery;
+    ADOQuery6: TADOQuery;
+    DataSource1: TDataSource;
+    DataSource2: TDataSource;
+    DataSource3: TDataSource;
+    DataSource4: TDataSource;
+    DataSource5: TDataSource;
+    ADOQuery7: TADOQuery;
+    DataSource6: TDataSource;
+    ADOQuery8: TADOQuery;
+    DataSource7: TDataSource;
+    ADOQuery9: TADOQuery;
+    DataSource8: TDataSource;
+    ADOQuery10: TADOQuery;
+    ADOQuery11: TADOQuery;
+    DataSource9: TDataSource;
+    ADOQuery12: TADOQuery;
+    DataSource10: TDataSource;
+    ADOQuery13: TADOQuery;
+    DataSource11: TDataSource;
+    ADOQuery14: TADOQuery;
+    DataSource12: TDataSource;
+    ADOQuery15: TADOQuery;
+    DataSource13: TDataSource;
+    ADOQuery16: TADOQuery;
+    DataSource14: TDataSource;
+    procedure DataModuleCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Dm1: TDm1;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+procedure TDm1.DataModuleCreate(Sender: TObject);
+begin
+ADOQuery1.Active:=true;
+ADOQuery2.Active:=true;
+ADOQuery3.Active:=true;
+ADOQuery4.Active:=true;
+ADOQuery5.Active:=true;
+ADOQuery6.Active:=true;
+end;
+
+end.

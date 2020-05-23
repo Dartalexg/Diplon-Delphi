@@ -1,0 +1,14 @@
+object Dm1: TDm1
+  OldCreateOrder = False
+  Height = 505
+  Width = 794
+  object ADOConnection1: TADOConnection
+    ConnectionString = 
+      'Provider=SQLOLEDB.1;Password=A2014a;Persist Security Info=True;U' +
+      'ser ID=sa;Initial Catalog=Data;Data Source=DESKTOP-TRF95A6'
+    LoginPrompt = False
+    Provider = 'SQLOLEDB.1'
+    Left = 256
+    Top = 8
+  end
+end

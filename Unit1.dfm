@@ -1,6 +1,7 @@
 object Form1: TForm1
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu, biMinimize, biMaximize, biHelp]
   Caption = #1055#1091#1083#1100#1090
   ClientHeight = 412
   ClientWidth = 670
@@ -46,7 +47,7 @@ object Form1: TForm1
     Top = 40
     Width = 684
     Height = 382
-    ActivePage = TabSheet1
+    ActivePage = TabSheet2
     MultiLine = True
     TabOrder = 1
     object TabSheet1: TTabSheet
@@ -103,23 +104,5 @@ object Form1: TForm1
         ColorPaletteIndex = 13
       end
     end
-  end
-  object Button1: TButton
-    Left = 416
-    Top = 9
-    Width = 75
-    Height = 25
-    Caption = 'Button1'
-    TabOrder = 2
-    OnClick = Button1Click
-  end
-  object Button2: TButton
-    Left = 520
-    Top = 8
-    Width = 75
-    Height = 25
-    Caption = 'Button2'
-    TabOrder = 3
-    OnClick = Button2Click
   end
 end

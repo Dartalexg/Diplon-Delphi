@@ -6,7 +6,7 @@ object Dm1: TDm1
   object ADOConnection1: TADOConnection
     ConnectionString = 
       'Provider=SQLOLEDB.1;Password=A2014a;Persist Security Info=True;U' +
-      'ser ID=sa;Initial Catalog=Data;Data Source=DESKTOP-TRF95A6'
+      'ser ID=sa;Initial Catalog=Data;Data Source=DESKTOP-B859NQI'
     LoginPrompt = False
     Provider = 'SQLOLEDB.1'
     Left = 256

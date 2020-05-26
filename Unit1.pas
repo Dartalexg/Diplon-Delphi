@@ -20,8 +20,6 @@ type
     ComboBox1: TComboBox;
     Label2: TLabel;
     StringGrid1: TStringGrid;
-    Button1: TButton;
-    Button2: TButton;
     procedure FormCreate(Sender: TObject);
 
     procedure FormResize(Sender: TObject);
@@ -45,18 +43,18 @@ implementation
 uses Unit2,Unit3;
 
 
- function XlsConnect: boolean;
+function XlsConnect: boolean;
 begin
-  Result := False;
-  try
-    FXlsApp := GetActiveOleObject('Excel.Application');
-    Result := True;
-  except
-  end;
+Result := False;
+try
+FXlsApp := GetActiveOleObject('Excel.Application');
+Result := True;
+except
+end;
 end;
 procedure XlsStart;
 begin
-  FXlsApp := CreateOleObject('Excel.Application');
+FXlsApp := CreateOleObject('Excel.Application');
 end;
 
 
@@ -296,7 +294,7 @@ if not XlsConnect then
     XlsStart;
   FXlsApp.Visible := false;
   //FXlsApp.WorkBooks.Add('');
-  FXlsApp.WorkBooks.open('C:\Users\Admin\Desktop\2\Win32\Debug\Модель\Модель_Соц_сфера.xlsx');
+  FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\Модель_Соц_сфера.xlsx');
   Sheet := FXlsApp.ActiveWorkBook.Sheets;
   Sheet.item[3].Activate;
  s:=TLineSeries.Create(Chart);
@@ -1017,7 +1015,7 @@ end;
 
 procedure TForm1.FormDestroy(Sender: TObject);
 begin
- FXlsApp.Quit;
+// FXlsApp.Quit;      вызывает почемуто ошибку проверить
 end;
 
 procedure TForm1.FormResize(Sender: TObject);// При изминении размеров формы

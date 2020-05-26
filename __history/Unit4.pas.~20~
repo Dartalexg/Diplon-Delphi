@@ -1,0 +1,130 @@
+unit Unit4;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.ComCtrls, Vcl.ExtCtrls,
+  VclTee.TeeGDIPlus, VCLTee.TeEngine, VCLTee.TeeProcs, VCLTee.Chart, Vcl.Grids,
+  Vcl.StdCtrls, Vcl.DBCtrls,Excel2000,ComObj;
+
+type
+  TForm4 = class(TForm)
+    MainMenu1: TMainMenu;
+    N11: TMenuItem;
+    N21: TMenuItem;
+    N12: TMenuItem;
+    N22: TMenuItem;
+    PageControlOsnova: TPageControl;
+    TabSheet1: TTabSheet;
+    TabSheet2: TTabSheet;
+    PanelBD: TPanel;
+    ButtonDimografia: TButton;
+    ButtonDinamic: TButton;
+    PageControlDinamic: TPageControl;
+    TabSheetDinamicTable: TTabSheet;
+    Label2: TLabel;
+    ComboBoxDinamic: TComboBox;
+    StringGridDinamic: TStringGrid;
+    TabSheetDinamicChart: TTabSheet;
+    Chart: TChart;
+    Label1: TLabel;
+    DBLookupComboBoxDinamic: TDBLookupComboBox;
+    procedure FormCreate(Sender: TObject);
+    procedure DBLookupComboBoxDinamicClick(Sender: TObject);
+    procedure ComboBoxDinamicClick(Sender: TObject);
+    procedure ButtonDinamicClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+Form4: TForm4;
+FXlsApp,sheet: variant;
+implementation
+uses Unit2;
+{$R *.dfm}
+//-------------------------------------------------------------------------------------------------------------Функции
+//------------------------------------------------------------------------------ Фукция для конекта с экселями
+function XlsConnect: boolean;
+begin
+Result := False;
+try
+FXlsApp := GetActiveOleObject('Excel.Application');
+Result := True;
+except
+end;
+end;
+procedure XlsStart;
+begin
+FXlsApp := CreateOleObject('Excel.Application');
+end;
+//-------------------------------------------------------------------------------------------------------------Процедуры
+//------------------------------------------------------------------------------ Активация контроллера Динамика по отраслям
+procedure TForm4.ButtonDinamicClick(Sender: TObject);
+begin
+PageControlDinamic.Visible:=True;
+end;
+//------------------------------------------------------------------------------ Выбор из бокса показатель пункта Динамика по отраслям
+procedure TForm4.ComboBoxDinamicClick(Sender: TObject);
+begin
+TabSheetDinamicChart.TabVisible:=True;
+end;
+//------------------------------------------------------------------------------ Выбор из бокса отрасль пункта Динамика по отраслям
+procedure TForm4.DBLookupComboBoxDinamicClick(Sender: TObject);
+begin
+ComboBoxDinamic.Enabled:=True;
+TabSheetDinamicChart.TabVisible:=False;
+if AnsiCompareText('Жилой фонд',Trim(DBLookupComboBoxDinamic.Text)) = 0 then
+begin
+ComboBoxDinamic.Items.Clear;
+ComboBoxDinamic.Text:='';
+ComboBoxDinamic.Items.Add('Мощности непроизводственной сферы на начало года, нат.ед (кв м)');
+ComboBoxDinamic.Items.Add('Эксплозатраты текущего года - план (тыс.руб)');
+ComboBoxDinamic.Items.Add('Ввод новых мощностей текущего года ЗА СЧЕТ БЮДЖЕТА- факт, нат.ед.');
+ComboBoxDinamic.Items.Add('Плата населения (тыс.руб) (ПЛАН)');
+ComboBoxDinamic.Items.Add('Ввод новых мощностей текущего года ЗА СЧЕТ НАСЕЛЕНИЯ- факт, нат.ед.');
+end
+else
+begin
+ComboBoxDinamic.Items.Clear;
+ComboBoxDinamic.Text:='';
+ComboBoxDinamic.Items.Add('Мощности непроизводственной сферы на начало года, нат.ед');
+ComboBoxDinamic.Items.Add('Эксплозатраты текущего года - план (тыс.руб)');
+ComboBoxDinamic.Items.Add('ФЗП (тыс. руб.)-план');
+ComboBoxDinamic.Items.Add('Ввод новых мощностей текущего года - факт, нат.ед.');
+ComboBoxDinamic.Items.Add('Плата населения (тыс.руб) (ПЛАН)');
+ComboBoxDinamic.Items.Add('Плата населения (тыс.руб) (факт)');
+ComboBoxDinamic.Items.Add('Число занятых (тыс. чел)');
+end;
+end;
+//------------------------------------------------------------------------------ Создание формы
+procedure TForm4.FormCreate(Sender: TObject);
+var h,w:real;
+begin
+//---------------------- Настройка формы
+h:=screen.Height;
+w:=screen.Width;
+Form4.Height:=screen.Height;
+Form4.Width:=screen.Width;
+Form4.BorderStyle := bsSingle;//запрет изменения размеров формы
+Form4.Align := alCustom;//запрет перемещение формы
+//----------------------Найстройка основной панели
+PageControlOsnova.Height:= screen.Height;
+PageControlOsnova.Width:=  screen.Width;
+//----------------------Найстройка панель БД
+PanelBD.Height:=PageControlOsnova.Height;
+//PageControlDinamic.Height:=PageControlOsnova.Height;
+//----------------------Найстройка Динамика по отрослям
+PageControlDinamic.Width:=Round(PageControlOsnova.Width-PanelBD.Width);//Табы
+StringGridDinamic.Width:=PageControlDinamic.Width;//Размер Табл
+ComboBoxDinamic.Enabled:=False;//бокс Показатель откл
+TabSheetDinamicChart.TabVisible:=False;//Страница диаграммы откл
+PageControlDinamic.ActivePage:=TabSheetDinamicTable;//Назначение первой страницы в контроллере
+PageControlDinamic.Visible:=False;//Видимость контроллера динамики (откл)
+end;
+//------------------------------------------------------------------------------
+
+end.

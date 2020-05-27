@@ -13,15 +13,21 @@ object Form3: TForm3
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object DBChart1: TDBChart
-    Left = 88
-    Top = 8
-    Width = 400
-    Height = 250
-    Title.Text.Strings = (
-      'TDBChart')
+  object Button1: TButton
+    Left = 224
+    Top = 88
+    Width = 75
+    Height = 25
+    Caption = 'Button1'
     TabOrder = 0
-    DefaultCanvas = 'TGDIPlusCanvas'
-    ColorPaletteIndex = 13
+    OnClick = Button1Click
+  end
+  object Edit1: TEdit
+    Left = 248
+    Top = 40
+    Width = 121
+    Height = 21
+    TabOrder = 1
+    Text = 'Edit1'
   end
 end

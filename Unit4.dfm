@@ -1,4 +1,4 @@
-object Form4: TForm4
+object PultUpav: TPultUpav
   Left = 0
   Top = 0
   Align = alClient
@@ -16,6 +16,7 @@ object Form4: TForm4
   OldCreateOrder = False
   WindowState = wsMaximized
   OnCreate = FormCreate
+  OnDestroy = FormDestroy
   PixelsPerInch = 96
   TextHeight = 13
   object PageControlOsnova: TPageControl
@@ -30,12 +31,12 @@ object Form4: TForm4
       object PanelBD: TPanel
         Left = 0
         Top = 0
-        Width = 185
+        Width = 189
         Height = 584
         TabOrder = 0
         object ButtonDimografia: TButton
           Left = 0
-          Top = 32
+          Top = 33
           Width = 185
           Height = 33
           Caption = #1044#1077#1084#1086#1075#1088#1072#1092#1080#1103
@@ -43,7 +44,7 @@ object Form4: TForm4
           OnClick = ButtonDimografiaClick
         end
         object ButtonDinamic: TButton
-          Left = 1
+          Left = 0
           Top = 0
           Width = 185
           Height = 33
@@ -62,8 +63,34 @@ object Form4: TForm4
         MultiLine = True
         TabOrder = 1
         Visible = False
-        OnChange = PageControlDinamicChange
-        ExplicitLeft = 191
+        object TabSheetDinamicChart: TTabSheet
+          Caption = #1044#1080#1072#1075#1088#1072#1084#1084#1072
+          ImageIndex = 1
+          object ChartDinamic: TChart
+            Left = 0
+            Top = 0
+            Width = 837
+            Height = 561
+            Title.Text.Strings = (
+              'TChart')
+            Align = alClient
+            TabOrder = 0
+            DefaultCanvas = 'TGDIPlusCanvas'
+            PrintMargins = (
+              15
+              16
+              15
+              16)
+            ColorPaletteIndex = 13
+            object Series1: TFastLineSeries
+              LinePen.Color = 10708548
+              XValues.Name = 'X'
+              XValues.Order = loAscending
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+          end
+        end
         object TabSheetDinamicTable: TTabSheet
           Caption = #1058#1072#1073#1083#1080#1094#1072
           object Label2: TLabel
@@ -149,43 +176,15 @@ object Form4: TForm4
             OnClick = DBLookupComboBoxDinamicClick
           end
         end
-        object TabSheetDinamicChart: TTabSheet
-          Caption = #1044#1080#1072#1075#1088#1072#1084#1084#1072
-          ImageIndex = 1
-          object ChartDinamic: TChart
-            Left = 0
-            Top = 0
-            Width = 837
-            Height = 561
-            Title.Text.Strings = (
-              'TChart')
-            Align = alClient
-            TabOrder = 0
-            DefaultCanvas = 'TGDIPlusCanvas'
-            PrintMargins = (
-              15
-              16
-              15
-              16)
-            ColorPaletteIndex = 13
-            object Series1: TFastLineSeries
-              LinePen.Color = 10708548
-              XValues.Name = 'X'
-              XValues.Order = loAscending
-              YValues.Name = 'Y'
-              YValues.Order = loNone
-            end
-          end
-        end
         object TabSheetDimografiaTable: TTabSheet
           Caption = #1058#1072#1073#1083#1080#1094#1072
           ImageIndex = 2
           object Label3: TLabel
-            Left = 10
-            Top = 5
-            Width = 97
+            Left = 3
+            Top = 3
+            Width = 248
             Height = 19
-            Caption = #1042#1099#1073#1077#1088#1080#1090#1077' ?'
+            Caption = #1042#1099#1073#1077#1088#1080#1090#1077' '#1074#1086#1079#1088#1072#1089#1090#1085#1091#1102' '#1075#1088#1091#1087#1087#1091
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -16
@@ -231,7 +230,7 @@ object Form4: TForm4
               64)
           end
           object ComboBoxDimografia: TComboBox
-            Left = 200
+            Left = 258
             Top = 3
             Width = 233
             Height = 21

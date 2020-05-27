@@ -99,9 +99,12 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Unit4.pas">
-            <Form>Form4</Form>
+            <Form>PultUpav</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="FunctionModel.pas"/>
+        <DCCReference Include="DinamicPoOtrasl.pas"/>
+        <DCCReference Include="Dimografia.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

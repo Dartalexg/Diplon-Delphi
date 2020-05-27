@@ -1,19 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.877,=E:\Diplon-Delphi\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.204,C:\Users\Admin\Documents\Embarcadero\Studio\Projects\Project1.dproj=I:\PO\Project1.dproj</Transaction>
     <Transaction>1899.12.30 00:00:00.000.087,=E:\Diplon-Delphi\Unit4.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.156,=I:\PO\Unit3.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.378,=C:\Users\Admin\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.877,=E:\Diplon-Delphi\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.621,C:\Users\Admin\Documents\Embarcadero\Studio\Projects\Unit1.pas=I:\PO\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.725,=C:\Users\Admin\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.378,=C:\Users\Admin\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.582,=C:\Users\Admin\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.508,=I:\PO\Unit3.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.621,I:\PO\Unit1.pas=C:\Users\Admin\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.621,I:\PO\Unit1.dfm=C:\Users\Admin\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.204,I:\PO\Project1.dproj=C:\Users\Admin\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.582,=I:\PO\Unit2.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.775,I:\PO\Unit2.pas=</Transaction>
     <Transaction>1899.12.30 00:00:00.000.051,=I:\PO\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.621,C:\Users\Admin\Documents\Embarcadero\Studio\Projects\Unit1.dfm=I:\PO\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.582,=I:\PO\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.156,=I:\PO\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.508,=I:\PO\Unit3.pas</Transaction>
+    <Transaction>2020.05.27 06:44:43.551,=C:\Users\Admin\Desktop\Diplon-Delphi\Unit5.pas</Transaction>
+    <Transaction>2020.05.27 06:56:29.849,C:\Users\Admin\Desktop\Diplon-Delphi\FunctionModel.pas=C:\Users\Admin\Desktop\Diplon-Delphi\Unit5.pas</Transaction>
+    <Transaction>2020.05.27 07:24:39.271,=C:\Users\Admin\Desktop\Diplon-Delphi\Unit5.pas</Transaction>
+    <Transaction>2020.05.27 07:25:19.584,C:\Users\Admin\Desktop\Diplon-Delphi\DinamicPoOtrasl.pas=C:\Users\Admin\Desktop\Diplon-Delphi\Unit5.pas</Transaction>
+    <Transaction>2020.05.27 07:47:46.880,=C:\Users\Admin\Desktop\Diplon-Delphi\Unit5.pas</Transaction>
+    <Transaction>2020.05.27 07:48:20.728,C:\Users\Admin\Desktop\Diplon-Delphi\Dimografia.pas=C:\Users\Admin\Desktop\Diplon-Delphi\Unit5.pas</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="Unit1.pas"/>
@@ -24,5 +30,8 @@
     <File Path="Unit3.dfm"/>
     <File Path="Unit4.pas"/>
     <File Path="Unit4.dfm"/>
+    <File Path="FunctionModel.pas"/>
+    <File Path="DinamicPoOtrasl.pas"/>
+    <File Path="Dimografia.pas"/>
   </ProjectSortOrder>
 </BorlandProject>

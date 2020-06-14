@@ -78,6 +78,15 @@ PultUpav.StringGridDimografia.Cells[26,0]:='2031'; ;
 begin
 if AnsiCompareText('Общая численность населения (тыс чел)',Trim(PultUpav.ComboBoxDimografia.Text)) = 0 then
 begin//11
+PultUpav.ChartDinamic.Legend.Title.Text.Text:=PultUpav.ComboBoxDimografia.Text;
+PultUpav.ChartDinamic.Legend.Title.Font.Size:=12;
+PultUpav.ChartDinamic.Title.Text.Text:='Общая численность населения';
+PultUpav.ChartDinamic.Title.Font.Size:=12;
+PultUpav.ChartDinamic.AxesList.Left.Title.Text:='Тысяч человек';
+PultUpav.ChartDinamic.AxesList.Left.Title.Font.Size:=12;
+PultUpav.ChartDinamic.AxesList.Bottom.Title.Text:='Года';
+PultUpav.ChartDinamic.AxesList.Bottom.Title.Font.Size:=12;
+
 for I := 1 to 26 do
 for x := 0 to PultUpav.StringGridDimografia.RowCount-1 do
 PultUpav.StringGridDimografia.Cells[i,1]:=FXlsApp.Cells[71,3+i];;
@@ -92,6 +101,15 @@ else
 begin
 if AnsiCompareText('Дошкольники, тыс. чел.',Trim(PultUpav.ComboBoxDimografia.Text)) = 0 then
 begin//12
+PultUpav.ChartDinamic.Legend.Title.Text.Text:=PultUpav.ComboBoxDimografia.Text;
+PultUpav.ChartDinamic.Legend.Title.Font.Size:=12;
+PultUpav.ChartDinamic.Title.Text.Text:='Дошкольники';
+PultUpav.ChartDinamic.Title.Font.Size:=12;
+PultUpav.ChartDinamic.AxesList.Left.Title.Text:='Тысяч человек';
+PultUpav.ChartDinamic.AxesList.Left.Title.Font.Size:=12;
+PultUpav.ChartDinamic.AxesList.Bottom.Title.Text:='Года';
+PultUpav.ChartDinamic.AxesList.Bottom.Title.Font.Size:=12;
+
 for I := 1 to 26 do
 for x := 0 to PultUpav.StringGridDimografia.RowCount-1 do
 PultUpav.StringGridDimografia.Cells[i,1]:=FXlsApp.Cells[72,3+i];;
@@ -104,6 +122,15 @@ PultUpav.ChartDinamic.View3d:=False;
 end
 else
 begin
+PultUpav.ChartDinamic.Legend.Title.Text.Text:=PultUpav.ComboBoxDimografia.Text;
+PultUpav.ChartDinamic.Legend.Title.Font.Size:=12;
+PultUpav.ChartDinamic.Title.Text.Text:='Реципиенты отрасли Образование';
+PultUpav.ChartDinamic.Title.Font.Size:=12;
+PultUpav.ChartDinamic.AxesList.Left.Title.Text:='Тысяч человек';
+PultUpav.ChartDinamic.AxesList.Left.Title.Font.Size:=12;
+PultUpav.ChartDinamic.AxesList.Bottom.Title.Text:='Года';
+PultUpav.ChartDinamic.AxesList.Bottom.Title.Font.Size:=12;
+
 if AnsiCompareText('Реципиенты отрасли Образование(тыс чел)',Trim(PultUpav.ComboBoxDimografia.Text)) = 0 then
 begin//13
 for I := 1 to 26 do

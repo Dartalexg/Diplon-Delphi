@@ -1,25 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.204,C:\Users\Admin\Documents\Embarcadero\Studio\Projects\Project1.dproj=I:\PO\Project1.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.087,=E:\Diplon-Delphi\Unit4.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.877,=E:\Diplon-Delphi\Unit4.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.621,C:\Users\Admin\Documents\Embarcadero\Studio\Projects\Unit1.pas=I:\PO\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.725,=C:\Users\Admin\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.378,=C:\Users\Admin\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.582,=C:\Users\Admin\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.775,I:\PO\Unit2.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.551,=C:\Users\Admin\Desktop\Diplon-Delphi\Unit5.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.880,=C:\Users\Admin\Desktop\Diplon-Delphi\Unit5.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.271,=C:\Users\Admin\Desktop\Diplon-Delphi\Unit5.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.000,=C:\Users\Admin\Desktop\Diplon-Delphi\PultNONProductSfer.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.051,=I:\PO\Unit2.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.621,C:\Users\Admin\Documents\Embarcadero\Studio\Projects\Unit1.dfm=I:\PO\Unit1.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.582,=I:\PO\Unit2.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.156,=I:\PO\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.621,I:\PO\Unit1.pas=C:\Users\Admin\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.310,C:\Users\Admin\Desktop\Diplon-Delphi\Unit5.pas=C:\Users\Admin\Desktop\Diplon-Delphi\DinamicObecpec.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.452,=C:\Users\Admin\Desktop\Diplon-Delphi\Unit5.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.596,C:\Users\Admin\Desktop\Diplon-Delphi\Unit5.pas=C:\Users\Admin\Desktop\Diplon-Delphi\estimate.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.312,=C:\Users\Admin\Desktop\Diplon-Delphi\Unit5.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.849,C:\Users\Admin\Desktop\Diplon-Delphi\Unit5.pas=C:\Users\Admin\Desktop\Diplon-Delphi\FunctionModel.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.584,C:\Users\Admin\Desktop\Diplon-Delphi\Unit5.pas=C:\Users\Admin\Desktop\Diplon-Delphi\DinamicPoOtrasl.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.728,C:\Users\Admin\Desktop\Diplon-Delphi\Unit5.pas=C:\Users\Admin\Desktop\Diplon-Delphi\Dimografia.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.775,I:\PO\Unit2.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.877,=E:\Diplon-Delphi\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.087,=E:\Diplon-Delphi\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.725,=C:\Users\Admin\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.011,=C:\Users\Admin\Desktop\Diplon-Delphi\PultPanelScriptZP.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.621,I:\PO\Unit1.dfm=C:\Users\Admin\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.990,=C:\Users\Admin\Desktop\Diplon-Delphi\PultKraevoiBudzet.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.582,=C:\Users\Admin\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.508,=I:\PO\Unit3.pas</Transaction>
-    <Transaction>2020.05.27 06:44:43.551,=C:\Users\Admin\Desktop\Diplon-Delphi\Unit5.pas</Transaction>
-    <Transaction>2020.05.27 06:56:29.849,C:\Users\Admin\Desktop\Diplon-Delphi\FunctionModel.pas=C:\Users\Admin\Desktop\Diplon-Delphi\Unit5.pas</Transaction>
-    <Transaction>2020.05.27 07:24:39.271,=C:\Users\Admin\Desktop\Diplon-Delphi\Unit5.pas</Transaction>
-    <Transaction>2020.05.27 07:25:19.584,C:\Users\Admin\Desktop\Diplon-Delphi\DinamicPoOtrasl.pas=C:\Users\Admin\Desktop\Diplon-Delphi\Unit5.pas</Transaction>
-    <Transaction>2020.05.27 07:47:46.880,=C:\Users\Admin\Desktop\Diplon-Delphi\Unit5.pas</Transaction>
-    <Transaction>2020.05.27 07:48:20.728,C:\Users\Admin\Desktop\Diplon-Delphi\Dimografia.pas=C:\Users\Admin\Desktop\Diplon-Delphi\Unit5.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.204,I:\PO\Project1.dproj=C:\Users\Admin\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.156,=I:\PO\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.378,=C:\Users\Admin\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.022,=C:\Users\Admin\Desktop\Diplon-Delphi\PultScriptINF.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.032,=C:\Users\Admin\Desktop\Diplon-Delphi\PultScriptRostTarif.pas</Transaction>
+    <Transaction>2020.06.14 16:40:45.659,=C:\Users\Admin\Desktop\Diplon-Delphi\Unit5.pas</Transaction>
+    <Transaction>2020.06.14 16:41:06.866,C:\Users\Admin\Desktop\Diplon-Delphi\Menu.pas=C:\Users\Admin\Desktop\Diplon-Delphi\Unit5.pas</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="Unit1.pas"/>
@@ -33,5 +44,13 @@
     <File Path="FunctionModel.pas"/>
     <File Path="DinamicPoOtrasl.pas"/>
     <File Path="Dimografia.pas"/>
+    <File Path="PultKraevoiBudzet.pas"/>
+    <File Path="PultNONProductSfer.pas"/>
+    <File Path="PultPanelScriptZP.pas"/>
+    <File Path="PultScriptINF.pas"/>
+    <File Path="PultScriptRostTarif.pas"/>
+    <File Path="DinamicObecpec.pas"/>
+    <File Path="estimate.pas"/>
+    <File Path="Menu.pas"/>
   </ProjectSortOrder>
 </BorlandProject>

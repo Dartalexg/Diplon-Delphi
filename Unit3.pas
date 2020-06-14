@@ -49,7 +49,7 @@ var i,x:integer;
 s:TLineSeries;
 begin
 
-if not XlsConnect then
+//if not XlsConnect then
   XlsStart;
   FXlsApp.Visible := false;
   //FXlsApp.WorkBooks.Add('');

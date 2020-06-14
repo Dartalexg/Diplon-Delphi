@@ -8,7 +8,15 @@ uses
   Unit4 in 'Unit4.pas' {PultUpav},
   FunctionModel in 'FunctionModel.pas',
   DinamicPoOtrasl in 'DinamicPoOtrasl.pas',
-  Dimografia in 'Dimografia.pas';
+  Dimografia in 'Dimografia.pas',
+  PultKraevoiBudzet in 'PultKraevoiBudzet.pas',
+  PultNONProductSfer in 'PultNONProductSfer.pas',
+  PultPanelScriptZP in 'PultPanelScriptZP.pas',
+  PultScriptINF in 'PultScriptINF.pas',
+  PultScriptRostTarif in 'PultScriptRostTarif.pas',
+  DinamicObecpec in 'DinamicObecpec.pas',
+  estimate in 'estimate.pas',
+  Menu in 'Menu.pas';
 
 {$R *.res}
 

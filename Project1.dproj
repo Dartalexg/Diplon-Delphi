@@ -105,6 +105,14 @@
         <DCCReference Include="FunctionModel.pas"/>
         <DCCReference Include="DinamicPoOtrasl.pas"/>
         <DCCReference Include="Dimografia.pas"/>
+        <DCCReference Include="PultKraevoiBudzet.pas"/>
+        <DCCReference Include="PultNONProductSfer.pas"/>
+        <DCCReference Include="PultPanelScriptZP.pas"/>
+        <DCCReference Include="PultScriptINF.pas"/>
+        <DCCReference Include="PultScriptRostTarif.pas"/>
+        <DCCReference Include="DinamicObecpec.pas"/>
+        <DCCReference Include="estimate.pas"/>
+        <DCCReference Include="Menu.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

@@ -1,0 +1,431 @@
+unit Unit4;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages,  Vcl.Menus, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.DBCtrls, Vcl.StdCtrls,
+  VclTee.TeeGDIPlus, VCLTee.TeEngine, Vcl.ExtCtrls, VCLTee.TeeProcs,
+  VCLTee.Chart, VCLTee.DBChart, Vcl.Grids, Vcl.DBGrids, VCLTee.Series,
+  Vcl.ComCtrls,Excel2000,ComObj, Vcl.Buttons;
+
+type
+  TPultUpav = class(TForm)
+    MainMenu1: TMainMenu;
+    N11: TMenuItem;
+    N21: TMenuItem;
+    N12: TMenuItem;
+    PageControlOsnova: TPageControl;
+    TabSheet1: TTabSheet;
+    PanelBD: TPanel;
+    ButtonDimografia: TButton;
+    ButtonDinamic: TButton;
+    PageControlDinamic: TPageControl;
+    TabSheetDinamicTable: TTabSheet;
+    Label2: TLabel;
+    ComboBoxDinamic: TComboBox;
+    StringGridDinamic: TStringGrid;
+    TabSheetDinamicChart: TTabSheet;
+    ChartDinamic: TChart;
+    Label1: TLabel;
+    DBLookupComboBoxDinamic: TDBLookupComboBox;
+    TabSheetDimografiaTable: TTabSheet;
+    StringGridDimografia: TStringGrid;
+    Label3: TLabel;
+    ComboBoxDimografia: TComboBox;
+    Series1: TFastLineSeries;
+    TabSheet3: TTabSheet;
+    PultPanelScriptINFL: TPanel;
+    PultPanelBudgetRegion: TPanel;
+    TabSheet4: TTabSheet;
+    TabSheet5: TTabSheet;
+    TabSheet6: TTabSheet;
+    Label4: TLabel;
+    Label5: TLabel;
+    BoxScriptINFL: TComboBox;
+    BitBtn1: TBitBtn;
+    Label6: TLabel;
+    Label7: TLabel;
+    BoxYearStartProject: TComboBox;
+    Label8: TLabel;
+    BoxScriptInvesticFB: TComboBox;
+    Label9: TLabel;
+    BoxTempPoctDoxodOtStartEkonom: TComboBox;
+    Label10: TLabel;
+    BoxScriptTransferAndInvest: TComboBox;
+    BitBtn2: TBitBtn;
+    PultPanelNONProductSfer: TPanel;
+    Label11: TLabel;
+    Label12: TLabel;
+    BoxScriptDoliNS: TComboBox;
+    Label13: TLabel;
+    BoxScriptReadGilaZaCheat: TComboBox;
+    PultPanelScriptRostTarif: TPanel;
+    Label14: TLabel;
+    Label15: TLabel;
+    Label16: TLabel;
+    Label17: TLabel;
+    Label18: TLabel;
+    Label19: TLabel;
+    Label20: TLabel;
+    Label21: TLabel;
+    BoxGKXScriptTarif: TComboBox;
+    BoxHkolaScriptTarif: TComboBox;
+    BoxObheeObrozScriptTarif: TComboBox;
+    BoxBolnicScriptTarif: TComboBox;
+    BoxPoliclinScriptTarif: TComboBox;
+    BoxKyltScriptTarif: TComboBox;
+    BoxFizKeltScriptTarif: TComboBox;
+    PultPanelScriptZP: TPanel;
+    Label22: TLabel;
+    PageControl1: TPageControl;
+    TabSheet7: TTabSheet;
+    Chart1: TChart;
+    FastLineSeries1: TFastLineSeries;
+    TabSheet9: TTabSheet;
+    StringGridDinamicObecpec: TStringGrid;
+    CheckBox1: TCheckBox;
+    CheckBox2: TCheckBox;
+    CheckBox3: TCheckBox;
+    CheckBox4: TCheckBox;
+    CheckBox5: TCheckBox;
+    CheckBox6: TCheckBox;
+    CheckBox7: TCheckBox;
+    ScrollBox1: TScrollBox;
+    BoxFizKeltScriptPoctZP: TComboBox;
+    BoxKyltScriptPoctZP: TComboBox;
+    BoxPoliclinScriptPoctZP: TComboBox;
+    BoxBolnicScriptPoctZP: TComboBox;
+    BoxObheeObrozScriptPoctZP: TComboBox;
+    BoxHkolaScriptPoctZP: TComboBox;
+    BoxGKXScriptPoctZP: TComboBox;
+    Label23: TLabel;
+    Label24: TLabel;
+    Label25: TLabel;
+    Label26: TLabel;
+    Label27: TLabel;
+    Label28: TLabel;
+    Label29: TLabel;
+    Button1: TButton;
+    TabSheet8: TTabSheet;
+    StringGrid1: TStringGrid;
+    PanelEstimate: TPanel;
+    Label30: TLabel;
+    LabelEstimate: TLabel;
+    Label32: TLabel;
+    ComboBoxEstimate: TComboBox;
+    procedure FormCreate(Sender: TObject);
+    procedure DBLookupComboBoxDinamicClick(Sender: TObject);
+    procedure ComboBoxDinamicClick(Sender: TObject);
+    procedure ButtonDinamicClick(Sender: TObject);
+    procedure ButtonDimografiaClick(Sender: TObject);
+    procedure ComboBoxDimografiaClick(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
+    procedure BoxScriptINFLClick(Sender: TObject);
+    procedure BoxYearStartProjectClick(Sender: TObject);
+    procedure BoxScriptInvesticFBClick(Sender: TObject);
+    procedure BoxTempPoctDoxodOtStartEkonomClick(Sender: TObject);
+    procedure BoxScriptTransferAndInvestClick(Sender: TObject);
+    procedure BoxScriptDoliNSClick(Sender: TObject);
+    procedure BoxScriptReadGilaZaCheatClick(Sender: TObject);
+    procedure BoxHkolaScriptTarifClick(Sender: TObject);
+    procedure BoxGKXScriptTarifClick(Sender: TObject);
+    procedure BoxObheeObrozScriptTarifClick(Sender: TObject);
+    procedure BoxBolnicScriptTarifClick(Sender: TObject);
+    procedure BoxPoliclinScriptTarifClick(Sender: TObject);
+    procedure BoxKyltScriptTarifClick(Sender: TObject);
+    procedure BoxFizKeltScriptTarifClick(Sender: TObject);
+    procedure BoxHkolaScriptPoctZPClick(Sender: TObject);
+    procedure BoxObheeObrozScriptPoctZPClick(Sender: TObject);
+    procedure BoxBolnicScriptPoctZPClick(Sender: TObject);
+    procedure BoxPoliclinScriptPoctZPClick(Sender: TObject);
+    procedure BoxKyltScriptPoctZPClick(Sender: TObject);
+    procedure BoxFizKeltScriptPoctZPClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure BitBtn2Click(Sender: TObject);
+    procedure CheckBox2Click(Sender: TObject);
+    procedure PageControlOsnovaChange(Sender: TObject);
+    procedure N12Click(Sender: TObject);
+    procedure ComboBoxEstimateClick(Sender: TObject);
+
+
+
+
+
+
+
+
+  private
+    { Private declarations }
+  public
+  end;
+
+var
+PultUpav: TPultUpav;
+FXlsApp,sheet: variant;
+implementation
+uses Unit2, FunctionModel, DinamicPoOtrasl, Dimografia, PultScriptINF,
+  PultKraevoiBudzet, PultNONProductSfer, PultScriptRostTarif, PultPanelScriptZP,
+  DinamicObecpec, estimate, Menu;
+{$R *.dfm}
+ //------------------------------------------------------------------------------ Фукция для конекта с экселями
+//------------------------------------------------------------------------------ Меню
+procedure TPultUpav.N12Click(Sender: TObject); //Выход
+begin
+PoCloses;//Menu
+end;
+
+
+//------------------------------------------------------------------------------ Динамика обеспеченности
+ procedure TPultUpav.CheckBox2Click(Sender: TObject);
+begin
+DinamicObecpecClik; //DinamicObecpec
+end;
+procedure TPultUpav.PageControlOsnovaChange(Sender: TObject);//открытие формы
+begin
+if PultUpav.PageControlOsnova.TabIndex=2 then
+ //OpenDinamicObecpecClik; //DinamicObecpec  неработает
+end;
+  //------------------------------------------------------------------------------ Пульт вкладка Сценарий роста зарплат в БС
+  procedure TPultUpav.BoxHkolaScriptPoctZPClick(Sender: TObject);//Дошкольные учреждения
+begin
+BoxHkolaScriptPoctZPClik;//PultPanelScriptZP
+end;
+procedure TPultUpav.BoxObheeObrozScriptPoctZPClick(Sender: TObject);//Общее образование
+begin
+BoxObheeObrozScriptPoctZPClik;//PultPanelScriptZP
+end;
+
+
+procedure TPultUpav.BoxBolnicScriptPoctZPClick(Sender: TObject);//   Больницы
+begin
+BoxBolnicScriptPoctZPClik;//PultPanelScriptZP
+end;
+procedure TPultUpav.BoxPoliclinScriptPoctZPClick(Sender: TObject);//   Полиники
+begin
+BoxPoliclinScriptPoctZPClik;//PultPanelScriptZP
+end;
+procedure TPultUpav.BoxKyltScriptPoctZPClick(Sender: TObject);//Культура
+begin
+BoxKyltScriptPoctZPClik;//PultPanelScriptZP
+end;
+procedure TPultUpav.BoxFizKeltScriptPoctZPClick(Sender: TObject);//Физическая культура
+begin
+BoxFizKeltScriptPoctZPClik;//PultPanelScriptZP
+end;
+ //------------------------------------------------------------------------------ Пульт вкладка Сценарии роста тарифов
+procedure TPultUpav.BoxGKXScriptTarifClick(Sender: TObject);//ЖКХ
+begin
+BoxGKXScriptTarifClik;//PultScriptRostTarif
+end;
+procedure TPultUpav.BoxHkolaScriptTarifClick(Sender: TObject);//Дошкольные учреждения
+begin
+BoxHkolaScriptTarifClik;//PultScriptRostTarif
+end;
+procedure TPultUpav.BoxObheeObrozScriptTarifClick(Sender: TObject);//Общее образование
+begin
+BoxObheeObrozScriptTarifClik;//PultScriptRostTarif
+end;
+procedure TPultUpav.BoxBolnicScriptTarifClick(Sender: TObject);//   Больницы
+begin
+BoxBolnicScriptTarifClik;//PultScriptRostTarif
+end;
+procedure TPultUpav.BoxPoliclinScriptTarifClick(Sender: TObject);//   Полиники
+begin
+BoxPoliclinScriptTarifClik;//PultScriptRostTarif
+end;
+procedure TPultUpav.BoxKyltScriptTarifClick(Sender: TObject);//Культура
+begin
+BoxKyltScriptTarifClik;//PultScriptRostTarif
+end;
+procedure TPultUpav.BoxFizKeltScriptTarifClick(Sender: TObject);//Физическая культура
+begin
+BoxFizKeltScriptTarifClik;//PultScriptRostTarif
+end;
+
+//------------------------------------------------------------------------------ Пульт вкладка Непроизводственная сфера
+procedure TPultUpav.BoxScriptDoliNSClick(Sender: TObject); //Сценарий  доли НС
+begin
+BoxScriptDoliNSClik//PultNONProductSfer
+end;
+procedure TPultUpav.BoxScriptReadGilaZaCheatClick(Sender: TObject);//Сценарий ввода жилья за счет населения
+begin
+BoxScriptReadGilaZaCheatClik;//PultNONProductSfer
+end;
+  //------------------------------------------------------------------------------ Пульт вкладка Краевой бюджет
+procedure TPultUpav.BitBtn2Click(Sender: TObject); //Подсказка
+begin
+BitBtn2Clic;
+end;
+ procedure TPultUpav.BoxYearStartProjectClick(Sender: TObject);//Год старта проектов МСБ
+begin
+BoxYearStartProjectClik//PultKraevoiBudzet
+end;
+procedure TPultUpav.BoxScriptInvesticFBClick(Sender: TObject);//Cценарий инвестиций ФБ в МСБ
+begin
+BoxScriptInvesticFBClik//PultKraevoiBudzet
+end;
+
+
+procedure TPultUpav.BoxTempPoctDoxodOtStartEkonomClick(Sender: TObject);//Темп роста собственных доходов от старой экономики
+begin
+BoxTempPoctDoxodOtStartEkonomClik;//PultKraevoiBudzet
+end;
+
+
+procedure TPultUpav.BoxScriptTransferAndInvestClick(Sender: TObject);//Сценарий трансфертов и инвестиций
+begin
+BoxScriptTransferAndInvestClik;//PultKraevoiBudzet
+end;
+
+//------------------------------------------------------------------------------ Пульт вкладка Сценарии инфляции бокс сценарии
+
+
+procedure TPultUpav.BoxScriptINFLClick(Sender: TObject);
+begin
+BoxScriptINFLClik//PultScriptINF
+end;
+ procedure TPultUpav.BitBtn1Click(Sender: TObject); //Подсказка
+begin
+BitBtn1Clic;
+end;
+//------------------------------------------------------------------------------ Активация контроллера Демография
+
+
+procedure TPultUpav.ButtonDimografiaClick(Sender: TObject);
+begin
+DimografiaButtonActiv;// FunctionModel
+end;
+//------------------------------------------------------------------------------ Активация контроллера Динамика по отраслям
+procedure TPultUpav.ButtonDinamicClick(Sender: TObject);
+begin
+DinamicButtonActiv;// FunctionModel
+end;
+//------------------------------------------------------------------------------ Выбор из бокса показатель пункта Димография
+
+
+procedure TPultUpav.ComboBoxDimografiaClick(Sender: TObject);
+begin
+ComboBoxDimografiaClickk;//Dimografia
+end;
+//------------------------------------------------------------------------------ Выбор из бокса показатель пункта Динамика по отраслям
+procedure TPultUpav.ComboBoxDinamicClick(Sender: TObject);
+begin
+ComboBoxDinamicClickk;//DinamicPoOtrasl
+end;
+
+//------------------------------------------------------------------------------ Выбор из бокса отрасль пункта Динамика по отраслям
+procedure TPultUpav.DBLookupComboBoxDinamicClick(Sender: TObject);
+begin
+DBLookupComboBoxDinamicClickk;//DinamicPoOtrasl
+end;
+//------------------------------------------------------------------------------ Выбор из бокса год пункта оценка
+procedure TPultUpav.ComboBoxEstimateClick(Sender: TObject);
+begin
+ComboBoxEstimateClickk; //estimate
+end;
+//------------------------------------------------------------------------------ Создание формы
+procedure TPultUpav.FormCreate(Sender: TObject);
+var S:integer;
+begin
+SettingCreate;// FunctionModel
+estimateopen;//estimate Оценка
+
+
+
+
+
+
+
+
+
+
+
+end;
+procedure TPultUpav.FormDestroy(Sender: TObject);
+begin
+//FXlsApp.Quit;
+end;
+
+
+
+
+
+
+
+
+
+
+//------------------------------------------------------------------------------     TEST
+
+
+
+
+
+
+
+procedure TPultUpav.Button1Click(Sender: TObject);
+
+ var a,s:TLineSeries;
+ i:integer;
+begin
+
+
+
+
+    PultUpav.StringGridDinamicObecpec.Cells[1,1] :='0';
+    PultUpav.StringGridDinamicObecpec.Cells[1,2] :='0';
+
+
+ for i  := 1 to 6 do
+
+If PultUpav.StringGridDinamicObecpec.cells[1,i]='' then
+   begin
+   PultUpav.StringGridDinamicObecpec.Cells[1,i] :='1';
+   showmessage ('Обнаружена пустая ячейка!');
+   end;
+
+
+ PultUpav.Chart1.ClearChart;
+ a:=TLineSeries.Create(PultUpav.Chart1);
+ s:=TLineSeries.Create(PultUpav.Chart1);
+
+for I := 0 to 10 do
+a.AddXY(I,i+1);
+PultUpav.Chart1.AddSeries(a);
+PultUpav.Chart1.View3d:=False;
+
+ for I := 0 to 15 do
+ s.AddXY(I,i+2);
+ PultUpav.Chart1.AddSeries(s);
+ Chart1.Title.Text.Text:='Заголовок';//Название диаграммы
+  //Chart1.Title.TextAlignment:='1';
+
+Chart1.Legend.Title.Text.Text:='Название легенды';//Название легенды
+Chart1.AxesList.Left.Title.Text:='Ось игрик';
+Chart1.AxesList.Bottom.Title.Text:='Ось икс';
+Chart1.SeriesList[0].Title:='подпись ';
+Chart1.SeriesList[1].Title:='подпись2 ' //подпись линий если их несколько
+end;
+
+
+procedure XlsStart;
+begin
+FXlsApp := CreateOleObject('Excel.Application');
+end;
+
+
+
+
+
+
+
+
+
+
+
+  //ShowMessage(PultUpav.Chart1.n)
+
+ //------------------------------------------------------------------------------
+end.

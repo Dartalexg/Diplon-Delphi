@@ -8,6 +8,7 @@ uses
   VCLTee.Chart, VCLTee.DBChart, Vcl.Grids, Vcl.DBGrids, VCLTee.Series,
   Vcl.ComCtrls,Excel2000,ComObj;
     procedure estimateopen;
+    procedure ComboBoxEstimateClickk;
 
 
 implementation
@@ -18,7 +19,7 @@ begin
 FXlsApp := CreateOleObject('Excel.Application');
 end;
  //------------------------------------------------------------------------------ оценка
-procedure estimateopen;
+procedure estimateopen;   //при старте программы
 begin
   XlsStart;
   FXlsApp.Visible := false;
@@ -71,5 +72,256 @@ FXlsApp.ActiveWorkbook.Save;
 FXlsApp.ActiveWorkbook.Close;
 
 end;
+//------------------------------------------------------------------------------ Выбор из бокса год пункта оценка
+procedure ComboBoxEstimateClickk;
+begin
+case strtoint(Trim(PultUpav.ComboBoxEstimate.Text)) of
+2030://2030
+begin
+  XlsStart;
+  FXlsApp.Visible := false;
+    FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\Модель_Соц_сфера.xlsx');
+  Sheet := FXlsApp.ActiveWorkBook.Sheets;
+  Sheet.item[6].Activate;
+
+PultUpav.StringGrid1.Cells[3,1]:=FormatFloat('0.######',FXlsApp.Cells[69,28]);
+PultUpav.StringGrid1.Cells[3,2]:=FormatFloat('0.######',FXlsApp.Cells[70,28]);
+PultUpav.StringGrid1.Cells[3,3]:=FormatFloat('0.######',FXlsApp.Cells[71,28]);
+PultUpav.StringGrid1.Cells[3,4]:=FormatFloat('0.######',FXlsApp.Cells[72,28]);
+PultUpav.StringGrid1.Cells[3,5]:=FormatFloat('0.######',FXlsApp.Cells[73,28]);
+PultUpav.StringGrid1.Cells[3,6]:=FormatFloat('0.######',FXlsApp.Cells[74,28]);
+PultUpav.StringGrid1.Cells[3,7]:=FormatFloat('0.######',FXlsApp.Cells[75,28]);
+
+FXlsApp.ActiveWorkbook.Save;
+FXlsApp.ActiveWorkbook.Close;
+
+PultUpav.LabelEstimate.Caption:='Год достижения значений '+Trim(PultUpav.ComboBoxEstimate.Text);
+end;
+
+2029://2029
+begin
+  XlsStart;
+  FXlsApp.Visible := false;
+    FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\Модель_Соц_сфера.xlsx');
+  Sheet := FXlsApp.ActiveWorkBook.Sheets;
+  Sheet.item[6].Activate;
+
+PultUpav.StringGrid1.Cells[3,1]:=FormatFloat('0.######',FXlsApp.Cells[69,27]);
+PultUpav.StringGrid1.Cells[3,2]:=FormatFloat('0.######',FXlsApp.Cells[70,27]);
+PultUpav.StringGrid1.Cells[3,3]:=FormatFloat('0.######',FXlsApp.Cells[71,27]);
+PultUpav.StringGrid1.Cells[3,4]:=FormatFloat('0.######',FXlsApp.Cells[72,27]);
+PultUpav.StringGrid1.Cells[3,5]:=FormatFloat('0.######',FXlsApp.Cells[73,27]);
+PultUpav.StringGrid1.Cells[3,6]:=FormatFloat('0.######',FXlsApp.Cells[74,27]);
+PultUpav.StringGrid1.Cells[3,7]:=FormatFloat('0.######',FXlsApp.Cells[75,27]);
+
+FXlsApp.ActiveWorkbook.Save;
+FXlsApp.ActiveWorkbook.Close;
+
+PultUpav.LabelEstimate.Caption:='Год достижения значений '+Trim(PultUpav.ComboBoxEstimate.Text);
+end;
+
+2028://2028
+begin
+  XlsStart;
+  FXlsApp.Visible := false;
+    FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\Модель_Соц_сфера.xlsx');
+  Sheet := FXlsApp.ActiveWorkBook.Sheets;
+  Sheet.item[6].Activate;
+
+PultUpav.StringGrid1.Cells[3,1]:=FormatFloat('0.######',FXlsApp.Cells[69,26]);
+PultUpav.StringGrid1.Cells[3,2]:=FormatFloat('0.######',FXlsApp.Cells[70,26]);
+PultUpav.StringGrid1.Cells[3,3]:=FormatFloat('0.######',FXlsApp.Cells[71,26]);
+PultUpav.StringGrid1.Cells[3,4]:=FormatFloat('0.######',FXlsApp.Cells[72,26]);
+PultUpav.StringGrid1.Cells[3,5]:=FormatFloat('0.######',FXlsApp.Cells[73,26]);
+PultUpav.StringGrid1.Cells[3,6]:=FormatFloat('0.######',FXlsApp.Cells[74,26]);
+PultUpav.StringGrid1.Cells[3,7]:=FormatFloat('0.######',FXlsApp.Cells[75,26]);
+
+FXlsApp.ActiveWorkbook.Save;
+FXlsApp.ActiveWorkbook.Close;
+
+PultUpav.LabelEstimate.Caption:='Год достижения значений '+Trim(PultUpav.ComboBoxEstimate.Text);
+end;
+
+2027://2027
+begin
+  XlsStart;
+  FXlsApp.Visible := false;
+    FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\Модель_Соц_сфера.xlsx');
+  Sheet := FXlsApp.ActiveWorkBook.Sheets;
+  Sheet.item[6].Activate;
+
+PultUpav.StringGrid1.Cells[3,1]:=FormatFloat('0.######',FXlsApp.Cells[69,25]);
+PultUpav.StringGrid1.Cells[3,2]:=FormatFloat('0.######',FXlsApp.Cells[70,25]);
+PultUpav.StringGrid1.Cells[3,3]:=FormatFloat('0.######',FXlsApp.Cells[71,25]);
+PultUpav.StringGrid1.Cells[3,4]:=FormatFloat('0.######',FXlsApp.Cells[72,25]);
+PultUpav.StringGrid1.Cells[3,5]:=FormatFloat('0.######',FXlsApp.Cells[73,25]);
+PultUpav.StringGrid1.Cells[3,6]:=FormatFloat('0.######',FXlsApp.Cells[74,25]);
+PultUpav.StringGrid1.Cells[3,7]:=FormatFloat('0.######',FXlsApp.Cells[75,25]);
+
+FXlsApp.ActiveWorkbook.Save;
+FXlsApp.ActiveWorkbook.Close;
+
+PultUpav.LabelEstimate.Caption:='Год достижения значений '+Trim(PultUpav.ComboBoxEstimate.Text);
+end;
+
+2026://2026
+begin
+  XlsStart;
+  FXlsApp.Visible := false;
+    FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\Модель_Соц_сфера.xlsx');
+  Sheet := FXlsApp.ActiveWorkBook.Sheets;
+  Sheet.item[6].Activate;
+
+PultUpav.StringGrid1.Cells[3,1]:=FormatFloat('0.######',FXlsApp.Cells[69,24]);
+PultUpav.StringGrid1.Cells[3,2]:=FormatFloat('0.######',FXlsApp.Cells[70,24]);
+PultUpav.StringGrid1.Cells[3,3]:=FormatFloat('0.######',FXlsApp.Cells[71,24]);
+PultUpav.StringGrid1.Cells[3,4]:=FormatFloat('0.######',FXlsApp.Cells[72,24]);
+PultUpav.StringGrid1.Cells[3,5]:=FormatFloat('0.######',FXlsApp.Cells[73,24]);
+PultUpav.StringGrid1.Cells[3,6]:=FormatFloat('0.######',FXlsApp.Cells[74,24]);
+PultUpav.StringGrid1.Cells[3,7]:=FormatFloat('0.######',FXlsApp.Cells[75,24]);
+
+FXlsApp.ActiveWorkbook.Save;
+FXlsApp.ActiveWorkbook.Close;
+
+PultUpav.LabelEstimate.Caption:='Год достижения значений '+Trim(PultUpav.ComboBoxEstimate.Text);
+end;
+
+2025://2025
+begin
+  XlsStart;
+  FXlsApp.Visible := false;
+    FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\Модель_Соц_сфера.xlsx');
+  Sheet := FXlsApp.ActiveWorkBook.Sheets;
+  Sheet.item[6].Activate;
+
+PultUpav.StringGrid1.Cells[3,1]:=FormatFloat('0.######',FXlsApp.Cells[69,23]);
+PultUpav.StringGrid1.Cells[3,2]:=FormatFloat('0.######',FXlsApp.Cells[70,23]);
+PultUpav.StringGrid1.Cells[3,3]:=FormatFloat('0.######',FXlsApp.Cells[71,23]);
+PultUpav.StringGrid1.Cells[3,4]:=FormatFloat('0.######',FXlsApp.Cells[72,23]);
+PultUpav.StringGrid1.Cells[3,5]:=FormatFloat('0.######',FXlsApp.Cells[73,23]);
+PultUpav.StringGrid1.Cells[3,6]:=FormatFloat('0.######',FXlsApp.Cells[74,23]);
+PultUpav.StringGrid1.Cells[3,7]:=FormatFloat('0.######',FXlsApp.Cells[75,23]);
+
+FXlsApp.ActiveWorkbook.Save;
+FXlsApp.ActiveWorkbook.Close;
+
+PultUpav.LabelEstimate.Caption:='Год достижения значений '+Trim(PultUpav.ComboBoxEstimate.Text);
+end;
+
+2024://2024
+begin
+  XlsStart;
+  FXlsApp.Visible := false;
+    FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\Модель_Соц_сфера.xlsx');
+  Sheet := FXlsApp.ActiveWorkBook.Sheets;
+  Sheet.item[6].Activate;
+
+PultUpav.StringGrid1.Cells[3,1]:=FormatFloat('0.######',FXlsApp.Cells[69,22]);
+PultUpav.StringGrid1.Cells[3,2]:=FormatFloat('0.######',FXlsApp.Cells[70,22]);
+PultUpav.StringGrid1.Cells[3,3]:=FormatFloat('0.######',FXlsApp.Cells[71,22]);
+PultUpav.StringGrid1.Cells[3,4]:=FormatFloat('0.######',FXlsApp.Cells[72,22]);
+PultUpav.StringGrid1.Cells[3,5]:=FormatFloat('0.######',FXlsApp.Cells[73,22]);
+PultUpav.StringGrid1.Cells[3,6]:=FormatFloat('0.######',FXlsApp.Cells[74,22]);
+PultUpav.StringGrid1.Cells[3,7]:=FormatFloat('0.######',FXlsApp.Cells[75,22]);
+
+FXlsApp.ActiveWorkbook.Save;
+FXlsApp.ActiveWorkbook.Close;
+
+PultUpav.LabelEstimate.Caption:='Год достижения значений '+Trim(PultUpav.ComboBoxEstimate.Text);
+end;
+
+2023://2023
+begin
+  XlsStart;
+  FXlsApp.Visible := false;
+    FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\Модель_Соц_сфера.xlsx');
+  Sheet := FXlsApp.ActiveWorkBook.Sheets;
+  Sheet.item[6].Activate;
+
+PultUpav.StringGrid1.Cells[3,1]:=FormatFloat('0.######',FXlsApp.Cells[69,21]);
+PultUpav.StringGrid1.Cells[3,2]:=FormatFloat('0.######',FXlsApp.Cells[70,21]);
+PultUpav.StringGrid1.Cells[3,3]:=FormatFloat('0.######',FXlsApp.Cells[71,21]);
+PultUpav.StringGrid1.Cells[3,4]:=FormatFloat('0.######',FXlsApp.Cells[72,21]);
+PultUpav.StringGrid1.Cells[3,5]:=FormatFloat('0.######',FXlsApp.Cells[73,21]);
+PultUpav.StringGrid1.Cells[3,6]:=FormatFloat('0.######',FXlsApp.Cells[74,21]);
+PultUpav.StringGrid1.Cells[3,7]:=FormatFloat('0.######',FXlsApp.Cells[75,21]);
+
+FXlsApp.ActiveWorkbook.Save;
+FXlsApp.ActiveWorkbook.Close;
+
+PultUpav.LabelEstimate.Caption:='Год достижения значений '+Trim(PultUpav.ComboBoxEstimate.Text);
+end;
+
+2022://2022
+begin
+  XlsStart;
+  FXlsApp.Visible := false;
+    FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\Модель_Соц_сфера.xlsx');
+  Sheet := FXlsApp.ActiveWorkBook.Sheets;
+  Sheet.item[6].Activate;
+
+PultUpav.StringGrid1.Cells[3,1]:=FormatFloat('0.######',FXlsApp.Cells[69,20]);
+PultUpav.StringGrid1.Cells[3,2]:=FormatFloat('0.######',FXlsApp.Cells[70,20]);
+PultUpav.StringGrid1.Cells[3,3]:=FormatFloat('0.######',FXlsApp.Cells[71,20]);
+PultUpav.StringGrid1.Cells[3,4]:=FormatFloat('0.######',FXlsApp.Cells[72,20]);
+PultUpav.StringGrid1.Cells[3,5]:=FormatFloat('0.######',FXlsApp.Cells[73,20]);
+PultUpav.StringGrid1.Cells[3,6]:=FormatFloat('0.######',FXlsApp.Cells[74,20]);
+PultUpav.StringGrid1.Cells[3,7]:=FormatFloat('0.######',FXlsApp.Cells[75,20]);
+
+FXlsApp.ActiveWorkbook.Save;
+FXlsApp.ActiveWorkbook.Close;
+
+PultUpav.LabelEstimate.Caption:='Год достижения значений '+Trim(PultUpav.ComboBoxEstimate.Text);
+end;
+
+2021://2021
+begin
+  XlsStart;
+  FXlsApp.Visible := false;
+    FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\Модель_Соц_сфера.xlsx');
+  Sheet := FXlsApp.ActiveWorkBook.Sheets;
+  Sheet.item[6].Activate;
+
+PultUpav.StringGrid1.Cells[3,1]:=FormatFloat('0.######',FXlsApp.Cells[69,19]);
+PultUpav.StringGrid1.Cells[3,2]:=FormatFloat('0.######',FXlsApp.Cells[70,19]);
+PultUpav.StringGrid1.Cells[3,3]:=FormatFloat('0.######',FXlsApp.Cells[71,19]);
+PultUpav.StringGrid1.Cells[3,4]:=FormatFloat('0.######',FXlsApp.Cells[72,19]);
+PultUpav.StringGrid1.Cells[3,5]:=FormatFloat('0.######',FXlsApp.Cells[73,19]);
+PultUpav.StringGrid1.Cells[3,6]:=FormatFloat('0.######',FXlsApp.Cells[74,19]);
+PultUpav.StringGrid1.Cells[3,7]:=FormatFloat('0.######',FXlsApp.Cells[75,19]);
+
+FXlsApp.ActiveWorkbook.Save;
+FXlsApp.ActiveWorkbook.Close;
+
+PultUpav.LabelEstimate.Caption:='Год достижения значений '+Trim(PultUpav.ComboBoxEstimate.Text);
+end;
+
+2020://2020
+begin
+  XlsStart;
+  FXlsApp.Visible := false;
+    FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\Модель_Соц_сфера.xlsx');
+  Sheet := FXlsApp.ActiveWorkBook.Sheets;
+  Sheet.item[6].Activate;
+
+PultUpav.StringGrid1.Cells[3,1]:=FormatFloat('0.######',FXlsApp.Cells[69,18]);
+PultUpav.StringGrid1.Cells[3,2]:=FormatFloat('0.######',FXlsApp.Cells[70,18]);
+PultUpav.StringGrid1.Cells[3,3]:=FormatFloat('0.######',FXlsApp.Cells[71,18]);
+PultUpav.StringGrid1.Cells[3,4]:=FormatFloat('0.######',FXlsApp.Cells[72,18]);
+PultUpav.StringGrid1.Cells[3,5]:=FormatFloat('0.######',FXlsApp.Cells[73,18]);
+PultUpav.StringGrid1.Cells[3,6]:=FormatFloat('0.######',FXlsApp.Cells[74,18]);
+PultUpav.StringGrid1.Cells[3,7]:=FormatFloat('0.######',FXlsApp.Cells[75,18]);
+
+FXlsApp.ActiveWorkbook.Save;
+FXlsApp.ActiveWorkbook.Close;
+
+PultUpav.LabelEstimate.Caption:='Год достижения значений '+Trim(PultUpav.ComboBoxEstimate.Text);
+end;
+
+
+end;
+end;
+
+
 
 end.

@@ -23,6 +23,7 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+  Application.Title := 'ќценка достижимости индикаторов развити€ социальной сферы';
   Application.CreateForm(TPultUpav, PultUpav);
   Application.CreateForm(TForm3, Form3);
   Application.CreateForm(TForm1, Form1);

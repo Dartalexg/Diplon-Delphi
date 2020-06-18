@@ -109,6 +109,13 @@ type
     Button1: TButton;
     TabSheet8: TTabSheet;
     StringGrid1: TStringGrid;
+    PanelEstimate: TPanel;
+    Label30: TLabel;
+    LabelEstimate: TLabel;
+    Label32: TLabel;
+    ComboBoxEstimate: TComboBox;
+    TabSheet2: TTabSheet;
+    TabSheet10: TTabSheet;
     procedure FormCreate(Sender: TObject);
     procedure DBLookupComboBoxDinamicClick(Sender: TObject);
     procedure ComboBoxDinamicClick(Sender: TObject);
@@ -142,6 +149,7 @@ type
     procedure CheckBox2Click(Sender: TObject);
     procedure PageControlOsnovaChange(Sender: TObject);
     procedure N12Click(Sender: TObject);
+    procedure ComboBoxEstimateClick(Sender: TObject);
 
 
 
@@ -169,6 +177,7 @@ procedure TPultUpav.N12Click(Sender: TObject); //Выход
 begin
 PoCloses;//Menu
 end;
+
 
 //------------------------------------------------------------------------------ Динамика обеспеченности
  procedure TPultUpav.CheckBox2Click(Sender: TObject);
@@ -307,10 +316,16 @@ procedure TPultUpav.ComboBoxDinamicClick(Sender: TObject);
 begin
 ComboBoxDinamicClickk;//DinamicPoOtrasl
 end;
+
 //------------------------------------------------------------------------------ Выбор из бокса отрасль пункта Динамика по отраслям
 procedure TPultUpav.DBLookupComboBoxDinamicClick(Sender: TObject);
 begin
 DBLookupComboBoxDinamicClickk;//DinamicPoOtrasl
+end;
+//------------------------------------------------------------------------------ Выбор из бокса год пункта оценка
+procedure TPultUpav.ComboBoxEstimateClick(Sender: TObject);
+begin
+ComboBoxEstimateClickk; //estimate
 end;
 //------------------------------------------------------------------------------ Создание формы
 procedure TPultUpav.FormCreate(Sender: TObject);

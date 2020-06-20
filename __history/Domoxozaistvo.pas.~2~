@@ -1,0 +1,43 @@
+unit Domoxozaistvo;
+
+interface
+uses
+  Winapi.Windows, Winapi.Messages,  Vcl.Menus, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.DBCtrls, Vcl.StdCtrls,
+  VclTee.TeeGDIPlus, VCLTee.TeEngine, Vcl.ExtCtrls, VCLTee.TeeProcs,
+  VCLTee.Chart, VCLTee.DBChart, Vcl.Grids, Vcl.DBGrids, VCLTee.Series,
+  Vcl.ComCtrls,Excel2000,ComObj;
+    procedure DomoxozaistvoOpen;
+     procedure ComboBox1Clickk;
+
+
+
+implementation
+
+uses Unit4;
+procedure XlsStart;
+begin
+FXlsApp := CreateOleObject('Excel.Application');
+end;
+//----------------------------------------------------------------------------------------------
+procedure DomoxozaistvoOpen;
+var i,k:integer;
+begin
+PultUpav.StringGrid4.Cells[0,0]:='Платные услуги';
+PultUpav.StringGrid4.Cells[0,1]:='Недвижимость';
+  XlsStart;
+  FXlsApp.Visible := false;
+    FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\Модель Домохозяйств.xlsm');
+  Sheet := FXlsApp.ActiveWorkBook.Sheets;
+  Sheet.item[1].Activate;
+for I := 0 to 1 do
+for k := 1 to 15 do
+PultUpav.StringGrid4.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[7+i,5+k]);
+  FXlsApp.ActiveWorkbook.Save;
+FXlsApp.ActiveWorkbook.Close;;
+end;
+
+
+
+
+end.

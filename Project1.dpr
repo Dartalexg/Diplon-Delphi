@@ -16,7 +16,9 @@ uses
   PultScriptRostTarif in 'PultScriptRostTarif.pas',
   DinamicObecpec in 'DinamicObecpec.pas',
   estimate in 'estimate.pas',
-  Menu in 'Menu.pas';
+  Menu in 'Menu.pas',
+  OsvoenieMSB in 'OsvoenieMSB.pas',
+  Domoxozaistvo in 'Domoxozaistvo.pas';
 
 {$R *.res}
 

@@ -1,0 +1,32 @@
+program Project1;
+
+uses
+  Vcl.Forms,
+  Unit1 in 'Unit1.pas' {Form1},
+  Unit2 in 'Unit2.pas' {Dm1: TDataModule},
+  Unit3 in 'Unit3.pas' {Form3},
+  Unit4 in 'Unit4.pas' {PultUpav},
+  FunctionModel in 'FunctionModel.pas',
+  DinamicPoOtrasl in 'DinamicPoOtrasl.pas',
+  Dimografia in 'Dimografia.pas',
+  PultKraevoiBudzet in 'PultKraevoiBudzet.pas',
+  PultNONProductSfer in 'PultNONProductSfer.pas',
+  PultPanelScriptZP in 'PultPanelScriptZP.pas',
+  PultScriptINF in 'PultScriptINF.pas',
+  PultScriptRostTarif in 'PultScriptRostTarif.pas',
+  DinamicObecpec in 'DinamicObecpec.pas',
+  estimate in 'estimate.pas',
+  Menu in 'Menu.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.Title := 'ќценка достижимости индикаторов развити€ социальной сферы';
+  Application.CreateForm(TPultUpav, PultUpav);
+  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TDm1, Dm1);
+  Application.Run;
+end.

@@ -32,6 +32,7 @@ begin
   FXlsApp.Cells[4,4]:=PultUpav.BoxYearStartProject.Text;
   FXlsApp.ActiveWorkbook.Save;
   FXlsApp.ActiveWorkbook.Close;
+  PultUpav.Label35.Caption:='Год старта проектов МСБ '+PultUpav.BoxYearStartProject.Text;
 end;
 procedure BoxScriptInvesticFBClik;//Cценарий инвестиций ФБ в МСБ
 begin

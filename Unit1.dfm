@@ -1,10 +1,12 @@
 object Form1: TForm1
   Left = 0
   Top = 0
-  BorderIcons = [biSystemMenu, biMinimize, biMaximize, biHelp]
-  Caption = #1055#1091#1083#1100#1090
-  ClientHeight = 412
-  ClientWidth = 670
+  Align = alCustom
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = #1057#1094#1077#1085#1072#1088#1080#1080' '#1090#1088#1072#1085#1089#1092#1077#1088#1090#1086#1074' '#1080' '#1080#1085#1074#1077#1089#1090#1080#1094#1080#1081
+  ClientHeight = 527
+  ClientWidth = 974
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,97 +14,81 @@ object Form1: TForm1
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poDesktopCenter
-  OnCreate = FormCreate
-  OnDestroy = FormDestroy
-  OnResize = FormResize
+  Position = poMainFormCenter
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
-  object Label1: TLabel
-    Left = 8
-    Top = 10
-    Width = 154
-    Height = 19
-    Caption = #1042#1099#1073#1077#1088#1080#1090#1077' '#1086#1090#1088#1072#1089#1083#1100
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -16
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    ParentFont = False
-  end
-  object DBLookupComboBox1: TDBLookupComboBox
-    Left = 194
-    Top = 8
-    Width = 183
-    Height = 21
-    KeyField = #1053#1072#1079#1074#1072#1085#1080#1077
-    ListFieldIndex = 1
-    ListSource = Dm1.DataSource1
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 974
+    Height = 49
+    Align = alTop
     TabOrder = 0
-    OnClick = DBLookupComboBox1Click
+    ExplicitWidth = 964
+    object Label4: TLabel
+      Left = 1
+      Top = 1
+      Width = 972
+      Height = 19
+      Align = alTop
+      Alignment = taCenter
+      Caption = #1057#1094#1077#1085#1072#1088#1080#1080' '#1090#1088#1072#1085#1089#1092#1077#1088#1090#1086#1074' '#1080' '#1080#1085#1074#1077#1089#1090#1080#1094#1080#1081
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitWidth = 314
+    end
+    object Label5: TLabel
+      Left = 4
+      Top = 27
+      Width = 66
+      Height = 18
+      Caption = #1057#1094#1077#1085#1072#1088#1080#1081
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Box: TComboBox
+      Left = 76
+      Top = 23
+      Width = 37
+      Height = 22
+      Style = csDropDownList
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      OnClick = BoxClick
+      Items.Strings = (
+        '1'
+        '2'
+        '3'
+        '4'
+        '5')
+    end
   end
-  object PageControl: TPageControl
-    Left = -2
-    Top = 40
-    Width = 684
-    Height = 382
-    ActivePage = TabSheet2
-    MultiLine = True
+  object Memo1: TMemo
+    Left = 0
+    Top = 49
+    Width = 974
+    Height = 478
+    Align = alClient
+    ReadOnly = True
     TabOrder = 1
-    object TabSheet1: TTabSheet
-      Caption = #1058#1072#1073#1083#1080#1094#1072
-      object Label2: TLabel
-        Left = 2
-        Top = 4
-        Width = 184
-        Height = 19
-        Caption = #1042#1099#1073#1077#1088#1080#1090#1077' '#1087#1086#1082#1072#1079#1072#1090#1077#1083#1100
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Tahoma'
-        Font.Style = [fsBold]
-        ParentFont = False
-      end
-      object ComboBox1: TComboBox
-        Left = 192
-        Top = 2
-        Width = 233
-        Height = 21
-        TabOrder = 0
-        Text = 'ComboBox1'
-        OnClick = ComboBox1Click
-      end
-      object StringGrid1: TStringGrid
-        Left = 0
-        Top = 29
-        Width = 665
-        Height = 120
-        ColCount = 27
-        TabOrder = 1
-      end
-    end
-    object TabSheet2: TTabSheet
-      Caption = #1044#1080#1072#1075#1088#1072#1084#1084#1072
-      ImageIndex = 1
-      object Chart: TChart
-        Left = 0
-        Top = 0
-        Width = 676
-        Height = 354
-        Title.Text.Strings = (
-          'TChart')
-        Align = alClient
-        TabOrder = 0
-        DefaultCanvas = 'TGDIPlusCanvas'
-        PrintMargins = (
-          15
-          24
-          15
-          24)
-        ColorPaletteIndex = 13
-      end
-    end
+    StyleElements = []
+    ExplicitLeft = 1
+    ExplicitTop = 39
+    ExplicitWidth = 296
+    ExplicitHeight = 114
   end
 end

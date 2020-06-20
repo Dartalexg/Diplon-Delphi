@@ -114,6 +114,8 @@
         <DCCReference Include="DinamicObecpec.pas"/>
         <DCCReference Include="estimate.pas"/>
         <DCCReference Include="Menu.pas"/>
+        <DCCReference Include="OsvoenieMSB.pas"/>
+        <DCCReference Include="Domoxozaistvo.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

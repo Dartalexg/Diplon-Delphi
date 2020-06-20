@@ -55,8 +55,45 @@ end;
 //------------------------------------------------------------------------------ Создание формы (Настройки при создании)
 procedure SettingCreate;
 var h,w:real;
- S:integer;
+ k,S:integer;
 begin
+PultUpav.Memo1.Height:=PultUpav.Memo1.Lines.Count*16;
+PultUpav.Memo2.Height:=PultUpav.Memo2.Lines.Count*16;
+PultUpav.Memo3.Height:=PultUpav.Memo3.Lines.Count*16;
+PultUpav.Memo4.Height:=PultUpav.Memo4.Lines.Count*16;
+PultUpav.Memo5.Height:=PultUpav.Memo5.Lines.Count*16;
+PultUpav.Memo6.Height:=PultUpav.Memo6.Lines.Count*16;
+PultUpav.Memo7.Height:=PultUpav.Memo7.Lines.Count*16;
+PultUpav.Memo8.Height:=PultUpav.Memo8.Lines.Count*16;
+
+PultUpav.Label35.Caption:='Год старта проектов МСБ '+PultUpav.BoxYearStartProject.Text;
+PultUpav.Image1.Picture.LoadFromFile(ExtractFilePath(Application.ExeName)+'Img\1.JPG');
+PultUpav.Image2.Picture.LoadFromFile(ExtractFilePath(Application.ExeName)+'Img\2.JPG');
+PultUpav.StringGrid2.ColWidths[0] := 100;
+PultUpav.StringGrid4.ColWidths[0] := 100;
+PultUpav.StringGrid5.ColWidths[0] := 100;
+begin
+if PultUpav.TabSheet5.Width<1920 then
+begin
+PultUpav.ScrollBox6.Width:=1920;
+PultUpav.Panel5.Width:=960;
+PultUpav.Panel6.Width:=960 ;
+end
+else
+begin
+PultUpav.Panel5.Width:=Round(screen.Width/2);
+PultUpav.Panel6.Width:=Round(screen.Width/2);
+end;
+end;
+
+
+
+
+//----------------------Найстройка таблицы вкладки тарифы и ЗП
+//PultUpav.StringGridTariff.Width:=PultUpav.ScrollBox2.Width;
+PultUpav.ScrollBox2.Width:=PultUpav.TabSheet13.Width;
+PultUpav.StringGridTariff.ColWidths[0] := 150;
+PultUpav.StringGridPayMoney.ColWidths[0] := 150;
 //---------------------- Настройка формы
 h:=screen.Height;
 w:=screen.Width;

@@ -11,9 +11,16 @@ uses
 
 type
   TForm3 = class(TForm)
-    Button1: TButton;
-    Edit1: TEdit;
-    procedure Button1Click(Sender: TObject);
+    Panel1: TPanel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Box: TComboBox;
+    Memo1: TMemo;
+    procedure FormDestroy(Sender: TObject);
+    procedure BoxClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormCreate(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -26,40 +33,53 @@ var
 implementation
 
 {$R *.dfm}
-function XlsConnect: boolean;
+
+uses Unit4;
+
+
+
+procedure TForm3.BoxClick(Sender: TObject);
 begin
-Result := False;
-try
-FXlsApp := GetActiveOleObject('Excel.Application');
-Result := True;
-except
+case strtoint(Trim(Box.Text)) of
+1:
+begin
+Memo1.Clear;
+Memo1.lines.add('Описание сценария11');
+end;
+2:
+begin
+Memo1.Clear;
+Memo1.lines.add('Описание сценария12');
+end;
+3:
+begin
+Memo1.Clear;
+Memo1.lines.add('Описание сценария13');
+end;
+
+
+
+
+
 end;
 end;
-procedure XlsStart;
+
+procedure TForm3.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-FXlsApp := CreateOleObject('Excel.Application');
+PultUpav.Enabled:=true;
+Box.ItemIndex:=-1;
+Memo1.Clear;
 end;
 
-
-
-
-
-procedure TForm3.Button1Click(Sender: TObject);
-var i,x:integer;
-s:TLineSeries;
+procedure TForm3.FormCreate(Sender: TObject);
 begin
+Box.ItemIndex:=-1;
+Memo1.Clear;
+end;
 
-//if not XlsConnect then
-  XlsStart;
-  FXlsApp.Visible := false;
-  //FXlsApp.WorkBooks.Add('');
-  FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\test.xlsx');
-  Sheet := FXlsApp.ActiveWorkBook.Sheets;
-  Sheet.item[1].Activate;
-  FXlsApp.Cells[1,2]:=Edit1.Text;;
-  FXlsApp.ActiveWorkbook.Save;
-  FXlsApp.ActiveWorkbook.Close;
-
+procedure TForm3.FormDestroy(Sender: TObject);
+begin
+PultUpav.Enabled:=true;
 end;
 
 end.

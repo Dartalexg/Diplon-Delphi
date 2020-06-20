@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.DBCtrls, Vcl.StdCtrls,
   VclTee.TeeGDIPlus, VCLTee.TeEngine, Vcl.ExtCtrls, VCLTee.TeeProcs,
   VCLTee.Chart, VCLTee.DBChart, Vcl.Grids, Vcl.DBGrids, VCLTee.Series,
-  Vcl.ComCtrls,Excel2000,ComObj, Vcl.Buttons;
+  Vcl.ComCtrls,Excel2000,ComObj, Vcl.Buttons, Vcl.Imaging.jpeg;
 
 type
   TPultUpav = class(TForm)
@@ -116,6 +116,76 @@ type
     ComboBoxEstimate: TComboBox;
     TabSheet2: TTabSheet;
     TabSheet10: TTabSheet;
+    ScrollBox2: TScrollBox;
+    PageControlTariff: TPageControl;
+    TabSheet11: TTabSheet;
+    ChartTariff: TChart;
+    FastLineSeries2: TFastLineSeries;
+    TabSheet13: TTabSheet;
+    StringGridTariff: TStringGrid;
+    Label31: TLabel;
+    Panel1: TPanel;
+    ScrollBox3: TScrollBox;
+    PageControl2: TPageControl;
+    TabSheet12: TTabSheet;
+    Label33: TLabel;
+    StringGridPayMoney: TStringGrid;
+    Panel2: TPanel;
+    TabSheet14: TTabSheet;
+    ChartPayMoney: TChart;
+    FastLineSeries3: TFastLineSeries;
+    ScrollBox5: TScrollBox;
+    Panel3: TPanel;
+    Panel4: TPanel;
+    Panel5: TPanel;
+    Panel6: TPanel;
+    ScrollBox6: TScrollBox;
+    Label34: TLabel;
+    Label35: TLabel;
+    Label36: TLabel;
+    Label37: TLabel;
+    Image1: TImage;
+    Image2: TImage;
+    Panel7: TPanel;
+    StringGrid2: TStringGrid;
+    Label38: TLabel;
+    Panel8: TPanel;
+    Panel9: TPanel;
+    Label39: TLabel;
+    Panel10: TPanel;
+    StringGrid3: TStringGrid;
+    Panel11: TPanel;
+    Label40: TLabel;
+    StringGrid4: TStringGrid;
+    Panel12: TPanel;
+    Label41: TLabel;
+    Label42: TLabel;
+    ComboBox1: TComboBox;
+    StringGrid5: TStringGrid;
+    Panel13: TPanel;
+    Panel14: TPanel;
+    Label44: TLabel;
+    Label45: TLabel;
+    Memo3: TMemo;
+    Label43: TLabel;
+    Memo1: TMemo;
+    Label46: TLabel;
+    Memo2: TMemo;
+    Panel15: TPanel;
+    Panel16: TPanel;
+    Label47: TLabel;
+    Label49: TLabel;
+    Label50: TLabel;
+    Memo5: TMemo;
+    Memo6: TMemo;
+    Memo4: TMemo;
+    Label48: TLabel;
+    Memo7: TMemo;
+    Label51: TLabel;
+    Label52: TLabel;
+    Memo8: TMemo;
+    N1: TMenuItem;
+    N2: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure DBLookupComboBoxDinamicClick(Sender: TObject);
     procedure ComboBoxDinamicClick(Sender: TObject);
@@ -150,6 +220,11 @@ type
     procedure PageControlOsnovaChange(Sender: TObject);
     procedure N12Click(Sender: TObject);
     procedure ComboBoxEstimateClick(Sender: TObject);
+    procedure ComboBox1Click(Sender: TObject);
+    procedure N1Click(Sender: TObject);
+    procedure N2Click(Sender: TObject);
+
+
 
 
 
@@ -169,7 +244,8 @@ FXlsApp,sheet: variant;
 implementation
 uses Unit2, FunctionModel, DinamicPoOtrasl, Dimografia, PultScriptINF,
   PultKraevoiBudzet, PultNONProductSfer, PultScriptRostTarif, PultPanelScriptZP,
-  DinamicObecpec, estimate, Menu;
+  DinamicObecpec, estimate, Menu, Tariff, PayMoney, OsvoenieMSB, Domoxozaistvo,
+  Unit3, Unit1;
 {$R *.dfm}
  //------------------------------------------------------------------------------ Фукция для конекта с экселями
 //------------------------------------------------------------------------------ Меню
@@ -178,6 +254,18 @@ begin
 PoCloses;//Menu
 end;
 
+
+procedure TPultUpav.N1Click(Sender: TObject);
+begin
+Form3.Show;
+PultUpav.Enabled:=false;
+end;
+
+procedure TPultUpav.N2Click(Sender: TObject);
+begin
+Form1.Show;
+PultUpav.Enabled:=false;
+end;
 
 //------------------------------------------------------------------------------ Динамика обеспеченности
  procedure TPultUpav.CheckBox2Click(Sender: TObject);
@@ -189,7 +277,9 @@ begin
 if PultUpav.PageControlOsnova.TabIndex=2 then
  //OpenDinamicObecpecClik; //DinamicObecpec  неработает
 end;
-  //------------------------------------------------------------------------------ Пульт вкладка Сценарий роста зарплат в БС
+
+
+//------------------------------------------------------------------------------ Пульт вкладка Сценарий роста зарплат в БС
   procedure TPultUpav.BoxHkolaScriptPoctZPClick(Sender: TObject);//Дошкольные учреждения
 begin
 BoxHkolaScriptPoctZPClik;//PultPanelScriptZP
@@ -258,7 +348,10 @@ end;
   //------------------------------------------------------------------------------ Пульт вкладка Краевой бюджет
 procedure TPultUpav.BitBtn2Click(Sender: TObject); //Подсказка
 begin
-BitBtn2Clic;
+if Panel16.Visible=false then
+Panel16.Visible:=true
+else
+Panel16.Visible:=false;
 end;
  procedure TPultUpav.BoxYearStartProjectClick(Sender: TObject);//Год старта проектов МСБ
 begin
@@ -266,7 +359,8 @@ BoxYearStartProjectClik//PultKraevoiBudzet
 end;
 procedure TPultUpav.BoxScriptInvesticFBClick(Sender: TObject);//Cценарий инвестиций ФБ в МСБ
 begin
-BoxScriptInvesticFBClik//PultKraevoiBudzet
+BoxScriptInvesticFBClik;//PultKraevoiBudzet
+Res;// OsvoenieMSB
 end;
 
 
@@ -290,7 +384,12 @@ BoxScriptINFLClik//PultScriptINF
 end;
  procedure TPultUpav.BitBtn1Click(Sender: TObject); //Подсказка
 begin
-BitBtn1Clic;
+//BitBtn1Clic;
+if Panel14.Visible=false then
+Panel14.Visible:=true
+else
+Panel14.Visible:=false;
+
 end;
 //------------------------------------------------------------------------------ Активация контроллера Демография
 
@@ -306,6 +405,11 @@ DinamicButtonActiv;// FunctionModel
 end;
 //------------------------------------------------------------------------------ Выбор из бокса показатель пункта Димография
 
+
+procedure TPultUpav.ComboBox1Click(Sender: TObject);
+begin
+ComboBox1Clickk;
+end;
 
 procedure TPultUpav.ComboBoxDimografiaClick(Sender: TObject);
 begin
@@ -333,13 +437,20 @@ var S:integer;
 begin
 SettingCreate;// FunctionModel
 estimateopen;//estimate Оценка
+TariffOpen;//Tariff обнавление вкладки тариф
+PayMoneyOpen;//PayMoney обнавление вкладки ЗП
+OsvoenieMSBOpen;// OsvoenieMSB
+Res;// OsvoenieMSB
+DomoxozaistvoOpen;// Domoxozaistvo
+ComboBox1Clickk; // Domoxozaistvo
+//------------------------------------------------------------------------------------доходы бюджета от реализации проекта
 
 
 
 
 
 
-
+//------------------------------------------------------------------------------------доходы бюджета от реализации проекта
 
 
 
@@ -349,6 +460,7 @@ procedure TPultUpav.FormDestroy(Sender: TObject);
 begin
 //FXlsApp.Quit;
 end;
+
 
 
 

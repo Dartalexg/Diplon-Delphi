@@ -9,6 +9,7 @@ uses
   Vcl.ComCtrls,Excel2000,ComObj;
     procedure DinamicObecpecClik;
         procedure OpenDinamicObecpecClik;
+    procedure DinamicObecpecControl;
 
 
 implementation
@@ -43,11 +44,11 @@ PultUpav.Chart1.ClearChart;
   g:=TLineSeries.Create(PultUpav.Chart1);
   PultUpav.Chart1.Legend.Title.Text.Text:='Легенда';
 PultUpav.Chart1.Legend.Title.Font.Size:=12;
-PultUpav.Chart1.Title.Text.Text:='Название диаграммы';
+PultUpav.Chart1.Title.Text.Text:='Динамика обеспеченности';
 PultUpav.Chart1.Title.Font.Size:=12;
 PultUpav.Chart1.AxesList.Left.Title.Text:='';
 PultUpav.Chart1.AxesList.Left.Title.Font.Size:=12;
-PultUpav.Chart1.AxesList.Bottom.Title.Text:='Года';
+PultUpav.Chart1.AxesList.Bottom.Title.Text:='Год';
 PultUpav.Chart1.AxesList.Bottom.Title.Font.Size:=12;
 ;
 begin
@@ -363,6 +364,91 @@ end;
   for i:=0 to ColCount-1 do
     Cols[i].Clear;
 end;
+
+
+//-----------------------------------------------------------------------------------------------------
+procedure DinamicObecpecControl;
+  var
+  x,i,k:integer;
+  a,b,c,d,e,f,g:TLineSeries;
+begin
+PultUpav.Chart2.View3d:=False;
+PultUpav.Chart2.ClearChart;
+  XlsStart;
+  FXlsApp.Visible := false;
+  //FXlsApp.WorkBooks.Add('');
+
+
+  b:=TLineSeries.Create(PultUpav.Chart2);
+  a:=TLineSeries.Create(PultUpav.Chart2);
+  c:=TLineSeries.Create(PultUpav.Chart2);
+  d:=TLineSeries.Create(PultUpav.Chart2);
+  e:=TLineSeries.Create(PultUpav.Chart2);
+  f:=TLineSeries.Create(PultUpav.Chart2);
+  g:=TLineSeries.Create(PultUpav.Chart2);
+  PultUpav.Chart2.Legend.Title.Text.Text:='Легенда';
+PultUpav.Chart2.Legend.Title.Font.Size:=12;
+PultUpav.Chart2.Title.Text.Text:='Динамика обеспеченности';
+PultUpav.Chart2.Title.Font.Size:=12;
+PultUpav.Chart2.AxesList.Left.Title.Text:='';
+PultUpav.Chart2.AxesList.Left.Title.Font.Size:=12;
+PultUpav.Chart2.AxesList.Bottom.Title.Text:='Год';
+PultUpav.Chart2.AxesList.Bottom.Title.Font.Size:=12;
+
+  FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\темпы роста сравнение.xlsx');
+  Sheet := FXlsApp.ActiveWorkBook.Sheets;
+  Sheet.item[7].Activate;
+
+ for I := 1 to 26 do
+a.AddXY(2006+i,FXlsApp.Cells[4,2+i]);
+PultUpav.Chart2.AddSeries(a);
+PultUpav.Chart2.View3d:=False;
+a.Title:='Жилой фонд';
+
+ for I := 1 to 26 do
+b.AddXY(2006+i,FXlsApp.Cells[5,2+i]);
+PultUpav.Chart2.AddSeries(b);
+PultUpav.Chart2.View3d:=False;
+b.Title:='Дошкольное образование';
+
+ for I := 1 to 26 do
+c.AddXY(2006+i,FXlsApp.Cells[6,2+i]);
+PultUpav.Chart2.AddSeries(c);
+PultUpav.Chart2.View3d:=False;
+c.Title:='Общее полное образование';
+
+ for I := 1 to 26 do
+d.AddXY(2006+i,FXlsApp.Cells[7,2+i]);
+PultUpav.Chart2.AddSeries(d);
+PultUpav.Chart2.View3d:=False;
+d.Title:='Больница';
+
+ for I := 1 to 26 do
+e.AddXY(2006+i,FXlsApp.Cells[8,2+i]);
+PultUpav.Chart2.AddSeries(e);
+PultUpav.Chart2.View3d:=False;
+e.Title:='Поликлиника';
+
+ for I := 1 to 26 do
+f.AddXY(2006+i,FXlsApp.Cells[9,2+i]);
+PultUpav.Chart2.AddSeries(f);
+PultUpav.Chart2.View3d:=False;
+f.Title:='Культура';
+
+ for I := 1 to 26 do
+g.AddXY(2006+i,FXlsApp.Cells[10,2+i]);
+PultUpav.Chart2.AddSeries(g);
+PultUpav.Chart2.View3d:=False;
+g.Title:='Физическая культура';
+
+
+
+
+
+ FXlsApp.ActiveWorkbook.Save;
+FXlsApp.ActiveWorkbook.Close;
+end;
+
 
 
 

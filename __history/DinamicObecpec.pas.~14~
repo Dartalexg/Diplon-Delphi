@@ -8,6 +8,7 @@ uses
   VCLTee.Chart, VCLTee.DBChart, Vcl.Grids, Vcl.DBGrids, VCLTee.Series,
   Vcl.ComCtrls,Excel2000,ComObj;
     procedure DinamicObecpecClik;
+        procedure OpenDinamicObecpecClik;
 
 
 implementation
@@ -24,7 +25,8 @@ procedure DinamicObecpecClik;
   a,b,c,d,e,f,g:TLineSeries;
   znac:string;
 begin
-znac:='Значение'; //словов значение в табл ячейка 0: n
+PultUpav.TabSheet7.TabVisible:=True;
+znac:='Значение'; //словов значение в табл ячейка 0:n
 PultUpav.Chart1.View3d:=False;
 PultUpav.Chart1.ClearChart;
   XlsStart;
@@ -41,7 +43,7 @@ PultUpav.Chart1.ClearChart;
   g:=TLineSeries.Create(PultUpav.Chart1);
   PultUpav.Chart1.Legend.Title.Text.Text:='Легенда';
 PultUpav.Chart1.Legend.Title.Font.Size:=12;
-PultUpav.Chart1.Title.Text.Text:='Название диаграммы';
+PultUpav.Chart1.Title.Text.Text:='Динамика обеспеченности';
 PultUpav.Chart1.Title.Font.Size:=12;
 PultUpav.Chart1.AxesList.Left.Title.Text:='';
 PultUpav.Chart1.AxesList.Left.Title.Font.Size:=12;
@@ -53,7 +55,7 @@ with PultUpav.StringGridDinamicObecpec do
   for i:=0 to ColCount-1 do
     Cols[i].Clear;
 end;
-
+PultUpav.TabSheet7.TabVisible:=False;   //вкладка Динамика обеспеченности    Диаграмма
 for x := 0 to PultUpav.StringGridDinamicObecpec.RowCount-1 do
 //ringGrid1.Cells[0,x]:=IntToStr(x);
 PultUpav.StringGridDinamicObecpec.Cells[0,0]:='Год';
@@ -88,6 +90,7 @@ PultUpav.StringGridDinamicObecpec.Cells[26,0]:='2031';
 Begin
 if PultUpav.CheckBox2.Checked then       //Жилой фонд
 begin
+PultUpav.TabSheet7.TabVisible:=True;   //вкладка Динамика обеспеченности    Диаграмма
   FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\темпы роста сравнение.xlsx');
   Sheet := FXlsApp.ActiveWorkBook.Sheets;
   Sheet.item[7].Activate;
@@ -98,6 +101,7 @@ PultUpav.Chart1.AddSeries(a);
 PultUpav.Chart1.View3d:=False;
 FXlsApp.ActiveWorkbook.Save;
 FXlsApp.ActiveWorkbook.Close;
+a.Title:='Жилой фонд';
 
   FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\Модель_Соц_сфера.xlsx');
   Sheet := FXlsApp.ActiveWorkBook.Sheets;
@@ -121,6 +125,7 @@ End;
 Begin
 if PultUpav.CheckBox3.Checked then  //Дошкольное образование
 begin
+PultUpav.TabSheet7.TabVisible:=True;   //вкладка Динамика обеспеченности    Диаграмма
   FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\темпы роста сравнение.xlsx');
   Sheet := FXlsApp.ActiveWorkBook.Sheets;
   Sheet.item[7].Activate;
@@ -131,6 +136,7 @@ PultUpav.Chart1.AddSeries(b);
 PultUpav.Chart1.View3d:=False;
 FXlsApp.ActiveWorkbook.Save;
 FXlsApp.ActiveWorkbook.Close;
+b.Title:='Дошкольное образование';
 
   FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\Модель_Соц_сфера.xlsx');
   Sheet := FXlsApp.ActiveWorkBook.Sheets;
@@ -154,6 +160,7 @@ End;
 Begin
 if PultUpav.CheckBox1.Checked then   //Общее полное образование
 begin
+PultUpav.TabSheet7.TabVisible:=True;   //вкладка Динамика обеспеченности    Диаграмма
   FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\темпы роста сравнение.xlsx');
   Sheet := FXlsApp.ActiveWorkBook.Sheets;
   Sheet.item[7].Activate;
@@ -161,9 +168,9 @@ begin
 c.AddXY(2006+i,FXlsApp.Cells[6,2+i]);
 PultUpav.Chart1.AddSeries(c);
 PultUpav.Chart1.View3d:=False;
-
 FXlsApp.ActiveWorkbook.Save;
 FXlsApp.ActiveWorkbook.Close;
+c.Title:='Общее полное образование';
 
   FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\Модель_Соц_сфера.xlsx');
   Sheet := FXlsApp.ActiveWorkBook.Sheets;
@@ -187,6 +194,7 @@ End;
 Begin
 if PultUpav.CheckBox4.Checked then //больница
 begin
+PultUpav.TabSheet7.TabVisible:=True;   //вкладка Динамика обеспеченности    Диаграмма
   FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\темпы роста сравнение.xlsx');
   Sheet := FXlsApp.ActiveWorkBook.Sheets;
   Sheet.item[7].Activate;
@@ -199,6 +207,7 @@ PultUpav.Chart1.View3d:=False;
 
 FXlsApp.ActiveWorkbook.Save;
 FXlsApp.ActiveWorkbook.Close;
+d.Title:='Больница';
 
   FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\Модель_Соц_сфера.xlsx');
   Sheet := FXlsApp.ActiveWorkBook.Sheets;
@@ -222,6 +231,7 @@ End;
 Begin
 if PultUpav.CheckBox5.Checked then //поликлиника
 begin
+PultUpav.TabSheet7.TabVisible:=True;   //вкладка Динамика обеспеченности    Диаграмма
   FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\темпы роста сравнение.xlsx');
   Sheet := FXlsApp.ActiveWorkBook.Sheets;
   Sheet.item[7].Activate;
@@ -234,6 +244,7 @@ PultUpav.Chart1.View3d:=False;
 
 FXlsApp.ActiveWorkbook.Save;
 FXlsApp.ActiveWorkbook.Close;
+e.Title:='Поликлиника';
 
   FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\Модель_Соц_сфера.xlsx');
   Sheet := FXlsApp.ActiveWorkBook.Sheets;
@@ -257,6 +268,7 @@ End;
 Begin
 if PultUpav.CheckBox6.Checked then //культура
 begin
+PultUpav.TabSheet7.TabVisible:=True;   //вкладка Динамика обеспеченности    Диаграмма
   FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\темпы роста сравнение.xlsx');
   Sheet := FXlsApp.ActiveWorkBook.Sheets;
   Sheet.item[7].Activate;
@@ -269,6 +281,7 @@ PultUpav.Chart1.View3d:=False;
 
 FXlsApp.ActiveWorkbook.Save;
 FXlsApp.ActiveWorkbook.Close;
+f.Title:='Культура';
 
   FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\Модель_Соц_сфера.xlsx');
   Sheet := FXlsApp.ActiveWorkBook.Sheets;
@@ -292,6 +305,7 @@ End;
 Begin
 if PultUpav.CheckBox7.Checked then //Физическая культура
 begin
+PultUpav.TabSheet7.TabVisible:=True;   //вкладка Динамика обеспеченности    Диаграмма
   FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\темпы роста сравнение.xlsx');
   Sheet := FXlsApp.ActiveWorkBook.Sheets;
   Sheet.item[7].Activate;
@@ -305,6 +319,7 @@ PultUpav.Chart1.View3d:=False;
 
 FXlsApp.ActiveWorkbook.Save;
 FXlsApp.ActiveWorkbook.Close;
+g.Title:='Физическая культура';
 
   FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\Модель_Соц_сфера.xlsx');
   Sheet := FXlsApp.ActiveWorkBook.Sheets;
@@ -324,6 +339,29 @@ FXlsApp.ActiveWorkbook.Close;
 end
 else
 End;
+
+
+
+
+
+end;
+
+ procedure OpenDinamicObecpecClik;//открытие вкладки
+ var i:integer;
+ begin
+  PultUpav.TabSheet7.TabVisible:=False; //
+
+  PultUpav.CheckBox1.Checked:=False;
+  PultUpav.CheckBox2.Checked:=False;
+  PultUpav.CheckBox3.Checked:=False;
+  PultUpav.CheckBox4.Checked:=False;
+  PultUpav.CheckBox5.Checked:=False;
+  PultUpav.CheckBox6.Checked:=False;
+  PultUpav.CheckBox7.Checked:=False;
+
+  with PultUpav.StringGridDinamicObecpec do
+  for i:=0 to ColCount-1 do
+    Cols[i].Clear;
 end;
 
 

@@ -57,6 +57,7 @@ procedure SettingCreate;
 var h,w:real;
  k,S:integer;
 begin
+
 PultUpav.Memo1.Height:=PultUpav.Memo1.Lines.Count*16;
 PultUpav.Memo2.Height:=PultUpav.Memo2.Lines.Count*16;
 PultUpav.Memo3.Height:=PultUpav.Memo3.Lines.Count*16;

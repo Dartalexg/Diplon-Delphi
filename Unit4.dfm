@@ -166,16 +166,12 @@ object PultUpav: TPultUpav
     Top = 0
     Width = 1722
     Height = 1020
-    ActivePage = TabSheet3
+    ActivePage = TabSheet4
     Align = alClient
     TabOrder = 0
     OnChange = PageControlOsnovaChange
-    ExplicitWidth = 1945
-    ExplicitHeight = 650
     object TabSheet1: TTabSheet
       Caption = #1041#1072#1079#1072' '#1044#1072#1085#1085#1099#1093
-      ExplicitWidth = 1476
-      ExplicitHeight = 622
       object PanelBD: TPanel
         Left = 0
         Top = 0
@@ -211,12 +207,9 @@ object PultUpav: TPultUpav
         MultiLine = True
         TabOrder = 1
         Visible = False
-        ExplicitLeft = 188
-        ExplicitHeight = 622
         object TabSheetDinamicChart: TTabSheet
           Caption = #1044#1080#1072#1075#1088#1072#1084#1084#1072
           ImageIndex = 1
-          ExplicitHeight = 594
           object ChartDinamic: TChart
             Left = 0
             Top = 0
@@ -226,7 +219,6 @@ object PultUpav: TPultUpav
               'TChart')
             Align = alClient
             TabOrder = 0
-            ExplicitHeight = 594
             DefaultCanvas = 'TGDIPlusCanvas'
             PrintMargins = (
               15
@@ -245,7 +237,6 @@ object PultUpav: TPultUpav
         end
         object TabSheetDinamicTable: TTabSheet
           Caption = #1058#1072#1073#1083#1080#1094#1072
-          ExplicitHeight = 594
           object Label2: TLabel
             Left = 2
             Top = 33
@@ -333,7 +324,6 @@ object PultUpav: TPultUpav
         object TabSheetDimografiaTable: TTabSheet
           Caption = #1058#1072#1073#1083#1080#1094#1072
           ImageIndex = 2
-          ExplicitHeight = 594
           object Label3: TLabel
             Left = 3
             Top = 3
@@ -399,8 +389,6 @@ object PultUpav: TPultUpav
     object TabSheet3: TTabSheet
       Caption = #1055#1091#1083#1100#1090
       ImageIndex = 2
-      ExplicitWidth = 1476
-      ExplicitHeight = 622
       object ScrollBox1: TScrollBox
         Left = 0
         Top = 0
@@ -408,7 +396,6 @@ object PultUpav: TPultUpav
         Height = 992
         Align = alLeft
         TabOrder = 0
-        ExplicitHeight = 622
         object PultPanelScriptZP: TPanel
           Left = 1350
           Top = 0
@@ -416,7 +403,6 @@ object PultUpav: TPultUpav
           Height = 971
           Align = alLeft
           TabOrder = 0
-          ExplicitHeight = 601
           object Label22: TLabel
             Left = 1
             Top = 1
@@ -677,7 +663,6 @@ object PultUpav: TPultUpav
           Height = 971
           Align = alLeft
           TabOrder = 1
-          ExplicitHeight = 601
           object Label14: TLabel
             Left = 1
             Top = 1
@@ -940,7 +925,6 @@ object PultUpav: TPultUpav
           Height = 971
           Align = alLeft
           TabOrder = 2
-          ExplicitHeight = 601
           object Panel15: TPanel
             Left = 1
             Top = 1
@@ -1032,7 +1016,7 @@ object PultUpav: TPultUpav
               OnClick = BitBtn2Click
             end
             object BoxScriptInvesticFB: TComboBox
-              Left = 234
+              Left = 233
               Top = 55
               Width = 113
               Height = 22
@@ -1142,15 +1126,11 @@ object PultUpav: TPultUpav
             Align = alClient
             TabOrder = 1
             Visible = False
-            ExplicitLeft = 50
-            ExplicitTop = 224
-            ExplicitWidth = 185
-            ExplicitHeight = 41
             object Label47: TLabel
               Left = 1
               Top = 1
               Width = 346
-              Height = 51
+              Height = 38
               Align = alTop
               Alignment = taCenter
               Caption = #1050#1088#1072#1090#1082#1086#1077' '#1086#1087#1080#1089#1072#1085#1080#1077' '#1089#1094#1077#1085#1072#1088#1080#1077#1074' '#1090#1088#1072#1085#1089#1092#1077#1088#1090#1086#1074' '#1080' '#1080#1085#1074#1077#1089#1090#1080#1094#1080#1081
@@ -1161,12 +1141,11 @@ object PultUpav: TPultUpav
               Font.Style = []
               ParentFont = False
               WordWrap = True
-              ExplicitLeft = 3
-              ExplicitTop = -2
+              ExplicitWidth = 332
             end
             object Label49: TLabel
               Left = 1
-              Top = 52
+              Top = 39
               Width = 346
               Height = 19
               Align = alTop
@@ -1178,12 +1157,11 @@ object PultUpav: TPultUpav
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
-              ExplicitTop = 20
               ExplicitWidth = 85
             end
             object Label50: TLabel
               Left = 1
-              Top = 185
+              Top = 172
               Width = 346
               Height = 19
               Align = alTop
@@ -1195,12 +1173,11 @@ object PultUpav: TPultUpav
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
-              ExplicitTop = 153
               ExplicitWidth = 85
             end
             object Label48: TLabel
               Left = 1
-              Top = 318
+              Top = 305
               Width = 346
               Height = 19
               Align = alTop
@@ -1212,12 +1189,11 @@ object PultUpav: TPultUpav
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
-              ExplicitTop = 305
               ExplicitWidth = 85
             end
             object Label51: TLabel
               Left = 1
-              Top = 451
+              Top = 438
               Width = 346
               Height = 19
               Align = alTop
@@ -1233,7 +1209,7 @@ object PultUpav: TPultUpav
             end
             object Label52: TLabel
               Left = 1
-              Top = 584
+              Top = 571
               Width = 346
               Height = 19
               Align = alTop
@@ -1249,7 +1225,7 @@ object PultUpav: TPultUpav
             end
             object Memo5: TMemo
               Left = 1
-              Top = 71
+              Top = 58
               Width = 346
               Height = 114
               Align = alTop
@@ -1260,12 +1236,10 @@ object PultUpav: TPultUpav
               ReadOnly = True
               TabOrder = 0
               StyleElements = []
-              ExplicitTop = 39
-              ExplicitWidth = 296
             end
             object Memo6: TMemo
               Left = 1
-              Top = 204
+              Top = 191
               Width = 346
               Height = 114
               Align = alTop
@@ -1279,12 +1253,10 @@ object PultUpav: TPultUpav
               ReadOnly = True
               TabOrder = 1
               StyleElements = []
-              ExplicitTop = 39
-              ExplicitWidth = 296
             end
             object Memo4: TMemo
               Left = 1
-              Top = 337
+              Top = 324
               Width = 346
               Height = 114
               Align = alTop
@@ -1301,12 +1273,10 @@ object PultUpav: TPultUpav
               ReadOnly = True
               TabOrder = 2
               StyleElements = []
-              ExplicitLeft = -3
-              ExplicitTop = 330
             end
             object Memo7: TMemo
               Left = 1
-              Top = 470
+              Top = 457
               Width = 346
               Height = 114
               Align = alTop
@@ -1323,12 +1293,10 @@ object PultUpav: TPultUpav
               ReadOnly = True
               TabOrder = 3
               StyleElements = []
-              ExplicitLeft = -11
-              ExplicitTop = 506
             end
             object Memo8: TMemo
               Left = 1
-              Top = 603
+              Top = 590
               Width = 346
               Height = 114
               Align = alTop
@@ -1345,8 +1313,6 @@ object PultUpav: TPultUpav
               ReadOnly = True
               TabOrder = 4
               StyleElements = []
-              ExplicitLeft = 4
-              ExplicitTop = 658
             end
           end
         end
@@ -1357,7 +1323,6 @@ object PultUpav: TPultUpav
           Height = 971
           Align = alLeft
           TabOrder = 3
-          ExplicitHeight = 601
           object Label11: TLabel
             Left = 1
             Top = 1
@@ -1390,8 +1355,8 @@ object PultUpav: TPultUpav
           object Label13: TLabel
             Left = 6
             Top = 59
-            Width = 123
-            Height = 37
+            Width = 155
+            Height = 60
             AutoSize = False
             Caption = #1057#1094#1077#1085#1072#1088#1080#1081' '#1074#1074#1086#1076#1072' '#1078#1080#1083#1100#1103' '#1079#1072' '#1089#1095#1077#1090' '#1085#1072#1089#1077#1083#1077#1085#1080#1103
             Font.Charset = DEFAULT_CHARSET
@@ -1425,7 +1390,7 @@ object PultUpav: TPultUpav
           end
           object BoxScriptReadGilaZaCheat: TComboBox
             Left = 160
-            Top = 75
+            Top = 82
             Width = 184
             Height = 22
             Style = csDropDownList
@@ -1452,7 +1417,6 @@ object PultUpav: TPultUpav
           Height = 971
           Align = alLeft
           TabOrder = 4
-          ExplicitHeight = 601
           object Panel13: TPanel
             Left = 1
             Top = 1
@@ -1474,9 +1438,7 @@ object PultUpav: TPultUpav
               Font.Name = 'Tahoma'
               Font.Style = [fsBold]
               ParentFont = False
-              ExplicitLeft = 0
-              ExplicitTop = 9
-              ExplicitWidth = 298
+              ExplicitWidth = 171
             end
             object Label5: TLabel
               Left = 4
@@ -1532,15 +1494,11 @@ object PultUpav: TPultUpav
             Align = alClient
             TabOrder = 1
             Visible = False
-            ExplicitLeft = 50
-            ExplicitTop = 224
-            ExplicitWidth = 185
-            ExplicitHeight = 41
             object Label44: TLabel
               Left = 1
               Top = 1
               Width = 296
-              Height = 32
+              Height = 19
               Align = alTop
               Alignment = taCenter
               Caption = #1050#1088#1072#1090#1082#1086#1077' '#1086#1087#1080#1089#1072#1085#1080#1077' '#1089#1094#1077#1085#1072#1088#1080#1077#1074' '#1080#1085#1092#1083#1103#1094#1080#1080
@@ -1550,10 +1508,11 @@ object PultUpav: TPultUpav
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
+              ExplicitWidth = 292
             end
             object Label45: TLabel
               Left = 1
-              Top = 299
+              Top = 286
               Width = 296
               Height = 19
               Align = alTop
@@ -1569,7 +1528,7 @@ object PultUpav: TPultUpav
             end
             object Label43: TLabel
               Left = 1
-              Top = 33
+              Top = 20
               Width = 296
               Height = 19
               Align = alTop
@@ -1585,7 +1544,7 @@ object PultUpav: TPultUpav
             end
             object Label46: TLabel
               Left = 1
-              Top = 166
+              Top = 153
               Width = 296
               Height = 19
               Align = alTop
@@ -1601,7 +1560,7 @@ object PultUpav: TPultUpav
             end
             object Memo3: TMemo
               Left = 1
-              Top = 318
+              Top = 305
               Width = 296
               Height = 114
               Align = alTop
@@ -1618,11 +1577,10 @@ object PultUpav: TPultUpav
               ReadOnly = True
               TabOrder = 0
               StyleElements = []
-              ExplicitTop = 39
             end
             object Memo1: TMemo
               Left = 1
-              Top = 52
+              Top = 39
               Width = 296
               Height = 114
               Align = alTop
@@ -1633,11 +1591,10 @@ object PultUpav: TPultUpav
               ReadOnly = True
               TabOrder = 1
               StyleElements = []
-              ExplicitTop = 39
             end
             object Memo2: TMemo
               Left = 1
-              Top = 185
+              Top = 172
               Width = 296
               Height = 114
               Align = alTop
@@ -1651,17 +1608,26 @@ object PultUpav: TPultUpav
               ReadOnly = True
               TabOrder = 2
               StyleElements = []
-              ExplicitTop = 39
             end
           end
+        end
+        object Chart2: TChart
+          Left = 1700
+          Top = 0
+          Width = 1200
+          Height = 971
+          Title.Text.Strings = (
+            'TChart')
+          Align = alRight
+          TabOrder = 5
+          DefaultCanvas = 'TGDIPlusCanvas'
+          ColorPaletteIndex = 13
         end
       end
     end
     object TabSheet4: TTabSheet
       Caption = #1044#1080#1085#1072#1084#1080#1082#1072' '#1086#1073#1077#1089#1087#1077#1095#1077#1085#1085#1086#1089#1090#1080
       ImageIndex = 3
-      ExplicitWidth = 1937
-      ExplicitHeight = 622
       object PageControl1: TPageControl
         Left = 0
         Top = 0
@@ -1671,13 +1637,9 @@ object PultUpav: TPultUpav
         Align = alClient
         MultiLine = True
         TabOrder = 0
-        ExplicitWidth = 1476
-        ExplicitHeight = 622
         object TabSheet9: TTabSheet
           Caption = #1058#1072#1073#1083#1080#1094#1072
           ImageIndex = 2
-          ExplicitWidth = 1468
-          ExplicitHeight = 594
           object StringGridDinamicObecpec: TStringGrid
             Left = 0
             Top = 35
@@ -1835,8 +1797,6 @@ object PultUpav: TPultUpav
         object TabSheet7: TTabSheet
           Caption = #1044#1080#1072#1075#1088#1072#1084#1084#1072
           ImageIndex = 1
-          ExplicitWidth = 1468
-          ExplicitHeight = 594
           object Chart1: TChart
             Left = 0
             Top = 0
@@ -1848,8 +1808,6 @@ object PultUpav: TPultUpav
             View3D = False
             Align = alClient
             TabOrder = 0
-            ExplicitWidth = 1468
-            ExplicitHeight = 594
             DefaultCanvas = 'TGDIPlusCanvas'
             PrintMargins = (
               15
@@ -1876,8 +1834,6 @@ object PultUpav: TPultUpav
     object TabSheet5: TTabSheet
       Caption = #1054#1089#1074#1086#1077#1085#1080#1077' '#1052#1057#1041
       ImageIndex = 4
-      ExplicitWidth = 1476
-      ExplicitHeight = 622
       object ScrollBox6: TScrollBox
         Left = 0
         Top = 0
@@ -1885,8 +1841,6 @@ object PultUpav: TPultUpav
         Height = 992
         Align = alClient
         TabOrder = 0
-        ExplicitWidth = 1908
-        ExplicitHeight = 624
         object Panel4: TPanel
           Left = 0
           Top = 89
@@ -1894,7 +1848,6 @@ object PultUpav: TPultUpav
           Height = 260
           Align = alTop
           TabOrder = 0
-          ExplicitWidth = 1887
           object Panel5: TPanel
             Left = 759
             Top = 1
@@ -1902,8 +1855,6 @@ object PultUpav: TPultUpav
             Height = 258
             Align = alRight
             TabOrder = 0
-            ExplicitLeft = 575
-            ExplicitHeight = 446
             object Label37: TLabel
               Left = 392
               Top = 5
@@ -1931,7 +1882,6 @@ object PultUpav: TPultUpav
             Height = 258
             Align = alLeft
             TabOrder = 1
-            ExplicitHeight = 1444
             object Label36: TLabel
               Left = 328
               Top = 5
@@ -1960,7 +1910,6 @@ object PultUpav: TPultUpav
           Height = 89
           Align = alTop
           TabOrder = 1
-          ExplicitWidth = 1887
           object Label34: TLabel
             Left = 866
             Top = 9
@@ -1996,7 +1945,6 @@ object PultUpav: TPultUpav
           Align = alTop
           Caption = 'Panel7'
           TabOrder = 2
-          ExplicitWidth = 1904
           object Panel8: TPanel
             Left = 1
             Top = 1
@@ -2004,15 +1952,12 @@ object PultUpav: TPultUpav
             Height = 41
             Align = alTop
             TabOrder = 0
-            ExplicitLeft = 720
-            ExplicitTop = 40
-            ExplicitWidth = 185
             object Label38: TLabel
               Left = 744
               Top = 5
               Width = 362
               Height = 19
-              Caption = #1044#1086#1093#1086#1076#1099' '#1073#1102#1076#1078#1077#1090#1072' '#1086#1090' '#1088#1077#1072#1083#1080#1079#1072#1094#1080#1080' '#1087#1088#1086#1077#1082#1090#1072' '#1074' ('#1084#1080#1083'. '#1088#1091#1073'.)'
+              Caption = #1044#1086#1093#1086#1076#1099' '#1073#1102#1076#1078#1077#1090#1072' '#1086#1090' '#1088#1077#1072#1083#1080#1079#1072#1094#1080#1080' '#1087#1088#1086#1077#1082#1090#1072' '#1074' ('#1084#1083#1085'. '#1088#1091#1073'.)'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -16
@@ -2039,15 +1984,12 @@ object PultUpav: TPultUpav
           Height = 41
           Align = alTop
           TabOrder = 3
-          ExplicitLeft = 904
-          ExplicitTop = 784
-          ExplicitWidth = 185
           object Label39: TLabel
             Left = 880
             Top = 13
-            Width = 64
+            Width = 130
             Height = 19
-            Caption = #1053#1072#1079#1074#1072#1085#1080#1077
+            Caption = #1055#1072#1088#1072#1084#1077#1090#1088#1099' '#1084#1086#1076#1077#1083#1080
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -16
@@ -2063,8 +2005,6 @@ object PultUpav: TPultUpav
           Height = 274
           Align = alClient
           TabOrder = 4
-          ExplicitWidth = 1904
-          ExplicitHeight = 263
           object StringGrid3: TStringGrid
             Left = 289
             Top = 0
@@ -2080,8 +2020,6 @@ object PultUpav: TPultUpav
     object TabSheet6: TTabSheet
       Caption = #1044#1086#1084#1086#1093#1086#1079#1103#1081#1089#1090#1074#1072
       ImageIndex = 5
-      ExplicitWidth = 1476
-      ExplicitHeight = 622
       object ScrollBox5: TScrollBox
         Left = 0
         Top = 0
@@ -2089,8 +2027,6 @@ object PultUpav: TPultUpav
         Height = 992
         Align = alClient
         TabOrder = 0
-        ExplicitWidth = 1476
-        ExplicitHeight = 622
         object Panel11: TPanel
           Left = 0
           Top = 0
@@ -2128,10 +2064,6 @@ object PultUpav: TPultUpav
           Height = 903
           Align = alClient
           TabOrder = 1
-          ExplicitLeft = 1216
-          ExplicitTop = 408
-          ExplicitWidth = 185
-          ExplicitHeight = 41
           object Label41: TLabel
             Left = 760
             Top = 11
@@ -2200,8 +2132,6 @@ object PultUpav: TPultUpav
     object TabSheet2: TTabSheet
       Caption = #1058#1072#1088#1080#1092#1099
       ImageIndex = 6
-      ExplicitWidth = 1476
-      ExplicitHeight = 622
       object ScrollBox2: TScrollBox
         Left = 0
         Top = 0
@@ -2209,8 +2139,6 @@ object PultUpav: TPultUpav
         Height = 992
         Align = alClient
         TabOrder = 0
-        ExplicitWidth = 1476
-        ExplicitHeight = 622
         object PageControlTariff: TPageControl
           Left = 0
           Top = 0
@@ -2223,14 +2151,12 @@ object PultUpav: TPultUpav
           object TabSheet13: TTabSheet
             Caption = #1058#1072#1073#1083#1080#1094#1072
             ImageIndex = 2
-            ExplicitWidth = 1464
-            ExplicitHeight = 590
             object Label31: TLabel
               Left = 762
               Top = 13
-              Width = 285
+              Width = 234
               Height = 19
-              Caption = #1044#1080#1085#1072#1084#1080#1082#1072'  '#1090#1072#1088#1080#1092#1072' '#1076#1083#1103' '#1085#1072#1089#1077#1083#1077#1085#1080#1103
+              Caption = #1050#1086#1101#1092#1092#1080#1094#1080#1077#1085#1090' '#1088#1086#1089#1090#1072' '#1090#1072#1088#1080#1092#1072
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -16
@@ -2247,8 +2173,6 @@ object PultUpav: TPultUpav
               ColCount = 27
               RowCount = 8
               TabOrder = 0
-              ExplicitWidth = 1464
-              ExplicitHeight = 541
               ColWidths = (
                 64
                 64
@@ -2285,15 +2209,12 @@ object PultUpav: TPultUpav
               Height = 49
               Align = alTop
               TabOrder = 1
-              ExplicitWidth = 1464
             end
           end
           object TabSheet11: TTabSheet
             Caption = #1044#1080#1072#1075#1088#1072#1084#1084#1072
             ImageIndex = 1
             TabVisible = False
-            ExplicitWidth = 1464
-            ExplicitHeight = 590
             object ChartTariff: TChart
               Left = 0
               Top = 0
@@ -2303,8 +2224,6 @@ object PultUpav: TPultUpav
                 'TChart')
               Align = alClient
               TabOrder = 0
-              ExplicitWidth = 1464
-              ExplicitHeight = 590
               DefaultCanvas = 'TGDIPlusCanvas'
               PrintMargins = (
                 15
@@ -2327,8 +2246,6 @@ object PultUpav: TPultUpav
     object TabSheet10: TTabSheet
       Caption = #1047#1072#1088#1072#1073#1086#1090#1085#1072#1103' '#1087#1083#1072#1090#1072
       ImageIndex = 7
-      ExplicitWidth = 1476
-      ExplicitHeight = 622
       object ScrollBox3: TScrollBox
         Left = 0
         Top = 0
@@ -2336,8 +2253,6 @@ object PultUpav: TPultUpav
         Height = 992
         Align = alClient
         TabOrder = 0
-        ExplicitWidth = 1476
-        ExplicitHeight = 622
         object PageControl2: TPageControl
           Left = 0
           Top = 0
@@ -2350,14 +2265,12 @@ object PultUpav: TPultUpav
           object TabSheet12: TTabSheet
             Caption = #1058#1072#1073#1083#1080#1094#1072
             ImageIndex = 2
-            ExplicitWidth = 1464
-            ExplicitHeight = 590
             object Label33: TLabel
               Left = 762
               Top = 13
-              Width = 315
+              Width = 252
               Height = 19
-              Caption = #1044#1080#1085#1072#1084#1080#1082#1072' '#1079#1072#1088#1087#1083#1072#1090#1099'  '#1074' '#1075#1086#1089#1089#1077#1082#1090#1086#1088#1077' '#1053#1057
+              Caption = #1050#1086#1101#1092#1092#1080#1094#1080#1077#1085#1090' '#1088#1086#1089#1090#1072' '#1079#1072#1088#1087#1083#1072#1090#1099
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -16
@@ -2374,8 +2287,6 @@ object PultUpav: TPultUpav
               ColCount = 27
               RowCount = 7
               TabOrder = 0
-              ExplicitWidth = 1464
-              ExplicitHeight = 541
               ColWidths = (
                 64
                 64
@@ -2412,15 +2323,12 @@ object PultUpav: TPultUpav
               Height = 49
               Align = alTop
               TabOrder = 1
-              ExplicitWidth = 1464
             end
           end
           object TabSheet14: TTabSheet
             Caption = #1044#1080#1072#1075#1088#1072#1084#1084#1072
             ImageIndex = 1
             TabVisible = False
-            ExplicitWidth = 1464
-            ExplicitHeight = 590
             object ChartPayMoney: TChart
               Left = 0
               Top = 0
@@ -2430,8 +2338,6 @@ object PultUpav: TPultUpav
                 'TChart')
               Align = alClient
               TabOrder = 0
-              ExplicitWidth = 1464
-              ExplicitHeight = 590
               DefaultCanvas = 'TGDIPlusCanvas'
               PrintMargins = (
                 15
@@ -2454,8 +2360,6 @@ object PultUpav: TPultUpav
     object TabSheet8: TTabSheet
       Caption = #1054#1094#1077#1085#1082#1072
       ImageIndex = 6
-      ExplicitWidth = 1476
-      ExplicitHeight = 622
       object StringGrid1: TStringGrid
         Left = 0
         Top = 65
@@ -2473,7 +2377,6 @@ object PultUpav: TPultUpav
         Height = 65
         Align = alTop
         TabOrder = 1
-        ExplicitWidth = 1476
         object LabelEstimate: TLabel
           Left = 770
           Top = 0
@@ -2531,13 +2434,14 @@ object PultUpav: TPultUpav
     Top = 65513
     object N11: TMenuItem
       Caption = #1060#1072#1081#1083#1099
+      Visible = False
       object N12: TMenuItem
         Caption = #1042#1099#1093#1086#1076
         OnClick = N12Click
       end
     end
     object N21: TMenuItem
-      Caption = #1057#1094#1077#1085#1072#1088#1080#1080
+      Caption = #1054#1087#1080#1089#1072#1085#1080#1077' '#1089#1094#1077#1085#1072#1088#1080#1077#1074
       object N1: TMenuItem
         Caption = #1057#1094#1077#1085#1072#1088#1080#1080' '#1080#1085#1092#1083#1103#1094#1080#1080
         OnClick = N1Click

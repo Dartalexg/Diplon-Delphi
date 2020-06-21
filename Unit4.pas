@@ -186,6 +186,7 @@ type
     Memo8: TMemo;
     N1: TMenuItem;
     N2: TMenuItem;
+    Chart2: TChart;
     procedure FormCreate(Sender: TObject);
     procedure DBLookupComboBoxDinamicClick(Sender: TObject);
     procedure ComboBoxDinamicClick(Sender: TObject);
@@ -283,67 +284,97 @@ end;
   procedure TPultUpav.BoxHkolaScriptPoctZPClick(Sender: TObject);//Дошкольные учреждения
 begin
 BoxHkolaScriptPoctZPClik;//PultPanelScriptZP
+ComboBoxEstimateClickk; //estimate
+DinamicObecpecControl;//DinamicObecpec
 end;
 procedure TPultUpav.BoxObheeObrozScriptPoctZPClick(Sender: TObject);//Общее образование
 begin
 BoxObheeObrozScriptPoctZPClik;//PultPanelScriptZP
+ComboBoxEstimateClickk; //estimate
+DinamicObecpecControl;//DinamicObecpec
 end;
 
 
 procedure TPultUpav.BoxBolnicScriptPoctZPClick(Sender: TObject);//   Больницы
 begin
 BoxBolnicScriptPoctZPClik;//PultPanelScriptZP
+ComboBoxEstimateClickk; //estimate
+DinamicObecpecControl;//DinamicObecpec
 end;
 procedure TPultUpav.BoxPoliclinScriptPoctZPClick(Sender: TObject);//   Полиники
 begin
 BoxPoliclinScriptPoctZPClik;//PultPanelScriptZP
+ComboBoxEstimateClickk; //estimate
+DinamicObecpecControl;//DinamicObecpec
 end;
 procedure TPultUpav.BoxKyltScriptPoctZPClick(Sender: TObject);//Культура
 begin
 BoxKyltScriptPoctZPClik;//PultPanelScriptZP
+ComboBoxEstimateClickk; //estimate
+DinamicObecpecControl;//DinamicObecpec
 end;
 procedure TPultUpav.BoxFizKeltScriptPoctZPClick(Sender: TObject);//Физическая культура
 begin
 BoxFizKeltScriptPoctZPClik;//PultPanelScriptZP
+ComboBoxEstimateClickk; //estimate
+DinamicObecpecControl;//DinamicObecpec
 end;
  //------------------------------------------------------------------------------ Пульт вкладка Сценарии роста тарифов
 procedure TPultUpav.BoxGKXScriptTarifClick(Sender: TObject);//ЖКХ
 begin
 BoxGKXScriptTarifClik;//PultScriptRostTarif
+ComboBoxEstimateClickk; //estimate
+DinamicObecpecControl;//DinamicObecpec
 end;
 procedure TPultUpav.BoxHkolaScriptTarifClick(Sender: TObject);//Дошкольные учреждения
 begin
 BoxHkolaScriptTarifClik;//PultScriptRostTarif
+ComboBoxEstimateClickk; //estimate
+DinamicObecpecControl;//DinamicObecpec
 end;
 procedure TPultUpav.BoxObheeObrozScriptTarifClick(Sender: TObject);//Общее образование
 begin
 BoxObheeObrozScriptTarifClik;//PultScriptRostTarif
+ComboBoxEstimateClickk; //estimate
+DinamicObecpecControl;//DinamicObecpec
 end;
 procedure TPultUpav.BoxBolnicScriptTarifClick(Sender: TObject);//   Больницы
 begin
 BoxBolnicScriptTarifClik;//PultScriptRostTarif
+ComboBoxEstimateClickk; //estimate
+DinamicObecpecControl;//DinamicObecpec
 end;
 procedure TPultUpav.BoxPoliclinScriptTarifClick(Sender: TObject);//   Полиники
 begin
 BoxPoliclinScriptTarifClik;//PultScriptRostTarif
+ComboBoxEstimateClickk; //estimate
+DinamicObecpecControl;//DinamicObecpec
 end;
 procedure TPultUpav.BoxKyltScriptTarifClick(Sender: TObject);//Культура
 begin
 BoxKyltScriptTarifClik;//PultScriptRostTarif
+ComboBoxEstimateClickk; //estimate
+DinamicObecpecControl;//DinamicObecpec
 end;
 procedure TPultUpav.BoxFizKeltScriptTarifClick(Sender: TObject);//Физическая культура
 begin
 BoxFizKeltScriptTarifClik;//PultScriptRostTarif
+ComboBoxEstimateClickk; //estimate
+DinamicObecpecControl;//DinamicObecpec
 end;
 
 //------------------------------------------------------------------------------ Пульт вкладка Непроизводственная сфера
 procedure TPultUpav.BoxScriptDoliNSClick(Sender: TObject); //Сценарий  доли НС
 begin
-BoxScriptDoliNSClik//PultNONProductSfer
+BoxScriptDoliNSClik;//PultNONProductSfer
+ComboBoxEstimateClickk; //estimate
+DinamicObecpecControl;//DinamicObecpec
 end;
 procedure TPultUpav.BoxScriptReadGilaZaCheatClick(Sender: TObject);//Сценарий ввода жилья за счет населения
 begin
 BoxScriptReadGilaZaCheatClik;//PultNONProductSfer
+ComboBoxEstimateClickk; //estimate
+DinamicObecpecControl;//DinamicObecpec
 end;
   //------------------------------------------------------------------------------ Пульт вкладка Краевой бюджет
 procedure TPultUpav.BitBtn2Click(Sender: TObject); //Подсказка
@@ -355,24 +386,32 @@ Panel16.Visible:=false;
 end;
  procedure TPultUpav.BoxYearStartProjectClick(Sender: TObject);//Год старта проектов МСБ
 begin
-BoxYearStartProjectClik//PultKraevoiBudzet
+BoxYearStartProjectClik;//PultKraevoiBudzet
+ComboBoxEstimateClickk; //estimate
+DinamicObecpecControl;//DinamicObecpec
 end;
 procedure TPultUpav.BoxScriptInvesticFBClick(Sender: TObject);//Cценарий инвестиций ФБ в МСБ
 begin
 BoxScriptInvesticFBClik;//PultKraevoiBudzet
 Res;// OsvoenieMSB
+ComboBoxEstimateClickk; //estimate
+DinamicObecpecControl;//DinamicObecpec
 end;
 
 
 procedure TPultUpav.BoxTempPoctDoxodOtStartEkonomClick(Sender: TObject);//Темп роста собственных доходов от старой экономики
 begin
 BoxTempPoctDoxodOtStartEkonomClik;//PultKraevoiBudzet
+ComboBoxEstimateClickk; //estimate
+DinamicObecpecControl;//DinamicObecpec
 end;
 
 
 procedure TPultUpav.BoxScriptTransferAndInvestClick(Sender: TObject);//Сценарий трансфертов и инвестиций
 begin
 BoxScriptTransferAndInvestClik;//PultKraevoiBudzet
+ComboBoxEstimateClickk; //estimate
+DinamicObecpecControl;//DinamicObecpec
 end;
 
 //------------------------------------------------------------------------------ Пульт вкладка Сценарии инфляции бокс сценарии
@@ -380,7 +419,9 @@ end;
 
 procedure TPultUpav.BoxScriptINFLClick(Sender: TObject);
 begin
-BoxScriptINFLClik//PultScriptINF
+BoxScriptINFLClik;//PultScriptINF
+ComboBoxEstimateClickk; //estimate
+DinamicObecpecControl;//DinamicObecpec
 end;
  procedure TPultUpav.BitBtn1Click(Sender: TObject); //Подсказка
 begin
@@ -443,6 +484,7 @@ OsvoenieMSBOpen;// OsvoenieMSB
 Res;// OsvoenieMSB
 DomoxozaistvoOpen;// Domoxozaistvo
 ComboBox1Clickk; // Domoxozaistvo
+DinamicObecpecControl;//DinamicObecpec
 //------------------------------------------------------------------------------------доходы бюджета от реализации проекта
 
 

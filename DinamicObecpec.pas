@@ -26,7 +26,7 @@ procedure DinamicObecpecClik;
   a,b,c,d,e,f,g:TLineSeries;
   znac:string;
 begin
-PultUpav.TabSheet7.TabVisible:=True;
+//PultUpav.TabSheet7.TabVisible:=True;
 znac:='Значение'; //словов значение в табл ячейка 0:n
 PultUpav.Chart1.View3d:=False;
 PultUpav.Chart1.ClearChart;
@@ -91,7 +91,7 @@ PultUpav.StringGridDinamicObecpec.Cells[26,0]:='2031';
 Begin
 if PultUpav.CheckBox2.Checked then       //Жилой фонд
 begin
-PultUpav.TabSheet7.TabVisible:=True;   //вкладка Динамика обеспеченности    Диаграмма
+//PultUpav.TabSheet7.TabVisible:=True;   //вкладка Динамика обеспеченности    Диаграмма
   FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\темпы роста сравнение.xlsx');
   Sheet := FXlsApp.ActiveWorkBook.Sheets;
   Sheet.item[7].Activate;
@@ -126,7 +126,7 @@ End;
 Begin
 if PultUpav.CheckBox3.Checked then  //Дошкольное образование
 begin
-PultUpav.TabSheet7.TabVisible:=True;   //вкладка Динамика обеспеченности    Диаграмма
+//PultUpav.TabSheet7.TabVisible:=True;   //вкладка Динамика обеспеченности    Диаграмма
   FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\темпы роста сравнение.xlsx');
   Sheet := FXlsApp.ActiveWorkBook.Sheets;
   Sheet.item[7].Activate;
@@ -161,7 +161,8 @@ End;
 Begin
 if PultUpav.CheckBox1.Checked then   //Общее полное образование
 begin
-PultUpav.TabSheet7.TabVisible:=True;   //вкладка Динамика обеспеченности    Диаграмма
+//PultUpav.TabSheet7.TabVisible:=True;
+  //вкладка Динамика обеспеченности    Диаграмма
   FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\темпы роста сравнение.xlsx');
   Sheet := FXlsApp.ActiveWorkBook.Sheets;
   Sheet.item[7].Activate;
@@ -195,7 +196,7 @@ End;
 Begin
 if PultUpav.CheckBox4.Checked then //больница
 begin
-PultUpav.TabSheet7.TabVisible:=True;   //вкладка Динамика обеспеченности    Диаграмма
+//PultUpav.TabSheet7.TabVisible:=True;   //вкладка Динамика обеспеченности    Диаграмма
   FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\темпы роста сравнение.xlsx');
   Sheet := FXlsApp.ActiveWorkBook.Sheets;
   Sheet.item[7].Activate;
@@ -232,7 +233,7 @@ End;
 Begin
 if PultUpav.CheckBox5.Checked then //поликлиника
 begin
-PultUpav.TabSheet7.TabVisible:=True;   //вкладка Динамика обеспеченности    Диаграмма
+//PultUpav.TabSheet7.TabVisible:=True;   //вкладка Динамика обеспеченности    Диаграмма
   FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\темпы роста сравнение.xlsx');
   Sheet := FXlsApp.ActiveWorkBook.Sheets;
   Sheet.item[7].Activate;
@@ -269,7 +270,7 @@ End;
 Begin
 if PultUpav.CheckBox6.Checked then //культура
 begin
-PultUpav.TabSheet7.TabVisible:=True;   //вкладка Динамика обеспеченности    Диаграмма
+//PultUpav.TabSheet7.TabVisible:=True;   //вкладка Динамика обеспеченности    Диаграмма
   FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\темпы роста сравнение.xlsx');
   Sheet := FXlsApp.ActiveWorkBook.Sheets;
   Sheet.item[7].Activate;
@@ -306,7 +307,7 @@ End;
 Begin
 if PultUpav.CheckBox7.Checked then //Физическая культура
 begin
-PultUpav.TabSheet7.TabVisible:=True;   //вкладка Динамика обеспеченности    Диаграмма
+//PultUpav.TabSheet7.TabVisible:=True;   //вкладка Динамика обеспеченности    Диаграмма
   FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\темпы роста сравнение.xlsx');
   Sheet := FXlsApp.ActiveWorkBook.Sheets;
   Sheet.item[7].Activate;

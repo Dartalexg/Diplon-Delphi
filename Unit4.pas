@@ -187,6 +187,44 @@ type
     N1: TMenuItem;
     N2: TMenuItem;
     Chart2: TChart;
+    Panel17: TPanel;
+    Panel18: TPanel;
+    Label53: TLabel;
+    Label54: TLabel;
+    Label55: TLabel;
+    Label56: TLabel;
+    Memo9: TMemo;
+    Memo10: TMemo;
+    Memo11: TMemo;
+    Label59: TLabel;
+    Label57: TLabel;
+    Label58: TLabel;
+    Memo12: TMemo;
+    Label60: TLabel;
+    Memo13: TMemo;
+    Label61: TLabel;
+    Memo14: TMemo;
+    BitBtn3: TBitBtn;
+    Panel19: TPanel;
+    Panel20: TPanel;
+    Label62: TLabel;
+    Label63: TLabel;
+    Label64: TLabel;
+    Label65: TLabel;
+    Memo15: TMemo;
+    Memo16: TMemo;
+    Memo17: TMemo;
+    BitBtn4: TBitBtn;
+    Panel21: TPanel;
+    BitBtn5: TBitBtn;
+    Panel22: TPanel;
+    Label66: TLabel;
+    Label67: TLabel;
+    Label68: TLabel;
+    Label69: TLabel;
+    Memo18: TMemo;
+    Memo19: TMemo;
+    Memo20: TMemo;
     procedure FormCreate(Sender: TObject);
     procedure DBLookupComboBoxDinamicClick(Sender: TObject);
     procedure ComboBoxDinamicClick(Sender: TObject);
@@ -224,6 +262,9 @@ type
     procedure ComboBox1Click(Sender: TObject);
     procedure N1Click(Sender: TObject);
     procedure N2Click(Sender: TObject);
+    procedure BitBtn3Click(Sender: TObject);
+    procedure BitBtn4Click(Sender: TObject);
+    procedure BitBtn5Click(Sender: TObject);
 
 
 
@@ -384,7 +425,31 @@ Panel16.Visible:=true
 else
 Panel16.Visible:=false;
 end;
- procedure TPultUpav.BoxYearStartProjectClick(Sender: TObject);//Год старта проектов МСБ
+ procedure TPultUpav.BitBtn3Click(Sender: TObject);
+begin
+if Panel18.Visible=false then
+Panel18.Visible:=true
+else
+Panel18.Visible:=false;
+end;
+
+procedure TPultUpav.BitBtn4Click(Sender: TObject);
+begin
+if Panel20.Visible=false then
+Panel20.Visible:=true
+else
+Panel20.Visible:=false;
+end;
+
+procedure TPultUpav.BitBtn5Click(Sender: TObject);
+begin
+if Panel22.Visible=false then
+Panel22.Visible:=true
+else
+Panel22.Visible:=false;
+end;
+
+procedure TPultUpav.BoxYearStartProjectClick(Sender: TObject);//Год старта проектов МСБ
 begin
 BoxYearStartProjectClik;//PultKraevoiBudzet
 ComboBoxEstimateClickk; //estimate

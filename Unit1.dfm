@@ -16,6 +16,7 @@ object Form1: TForm1
   OldCreateOrder = False
   Position = poMainFormCenter
   OnClose = FormClose
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -25,7 +26,6 @@ object Form1: TForm1
     Height = 49
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 964
     object Label4: TLabel
       Left = 1
       Top = 1
@@ -86,9 +86,5 @@ object Form1: TForm1
     ReadOnly = True
     TabOrder = 1
     StyleElements = []
-    ExplicitLeft = 1
-    ExplicitTop = 39
-    ExplicitWidth = 296
-    ExplicitHeight = 114
   end
 end

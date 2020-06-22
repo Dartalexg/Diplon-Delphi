@@ -44,17 +44,17 @@ case strtoint(Trim(Box.Text)) of
 1:
 begin
 Memo1.Clear;
-Memo1.lines.add('ќписание сценари€11');
+Memo1.lines.add('ѕессимистический сценарий - уровень инфл€ции высокий, ежегодный рост на 1-3%');
 end;
 2:
 begin
 Memo1.Clear;
-Memo1.lines.add('ќписание сценари€12');
+Memo1.lines.add('»нерционный сценарий - уровень инфл€ции ок. 4-5%');
 end;
 3:
 begin
 Memo1.Clear;
-Memo1.lines.add('ќписание сценари€13');
+Memo1.lines.add('ќптимистический сценарий - ежегодный рост на 3-5%');
 end;
 
 
@@ -75,6 +75,8 @@ procedure TForm3.FormCreate(Sender: TObject);
 begin
 Box.ItemIndex:=-1;
 Memo1.Clear;
+Memo1.Font.Size:=12;
+Memo1.Height:=PultUpav.Memo1.Lines.Count*20;
 end;
 
 procedure TForm3.FormDestroy(Sender: TObject);

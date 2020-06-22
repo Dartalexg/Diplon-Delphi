@@ -66,7 +66,7 @@ begin
   FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\темпы роста сравнение.xlsx');
   Sheet := FXlsApp.ActiveWorkBook.Sheets;
   Sheet.item[5].Activate;
-  FXlsApp.Cells[6,7]:=PultUpav.BoxScriptTransferAndInvest.Text;
+  FXlsApp.Cells[5,4]:=PultUpav.BoxScriptTransferAndInvest.Text;
   FXlsApp.ActiveWorkbook.Save;
   FXlsApp.ActiveWorkbook.Close;
 end;

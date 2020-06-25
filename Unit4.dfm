@@ -166,12 +166,10 @@ object PultUpav: TPultUpav
     Top = 0
     Width = 1722
     Height = 1020
-    ActivePage = TabSheet3
+    ActivePage = TabSheet6
     Align = alClient
     TabOrder = 0
     OnChange = PageControlOsnovaChange
-    ExplicitLeft = -128
-    ExplicitTop = -8
     object TabSheet1: TTabSheet
       Caption = #1041#1072#1079#1072' '#1044#1072#1085#1085#1099#1093
       object PanelBD: TPanel
@@ -413,7 +411,6 @@ object PultUpav: TPultUpav
             Height = 231
             Align = alTop
             TabOrder = 0
-            ExplicitTop = 20
             object Label22: TLabel
               Left = 1
               Top = 1
@@ -686,9 +683,6 @@ object PultUpav: TPultUpav
             Align = alClient
             TabOrder = 1
             Visible = False
-            ExplicitTop = 65
-            ExplicitWidth = 298
-            ExplicitHeight = 905
             object Label66: TLabel
               Left = 1
               Top = 1
@@ -764,9 +758,6 @@ object PultUpav: TPultUpav
               ReadOnly = True
               TabOrder = 0
               StyleElements = []
-              ExplicitLeft = -1
-              ExplicitTop = 308
-              ExplicitWidth = 296
             end
             object Memo19: TMemo
               Left = 1
@@ -779,9 +770,6 @@ object PultUpav: TPultUpav
               ReadOnly = True
               TabOrder = 1
               StyleElements = []
-              ExplicitLeft = -1
-              ExplicitTop = 42
-              ExplicitWidth = 296
             end
             object Memo20: TMemo
               Left = 1
@@ -794,8 +782,6 @@ object PultUpav: TPultUpav
               ReadOnly = True
               TabOrder = 2
               StyleElements = []
-              ExplicitLeft = -3
-              ExplicitTop = 166
             end
           end
         end
@@ -1087,9 +1073,6 @@ object PultUpav: TPultUpav
             Align = alClient
             TabOrder = 1
             Visible = False
-            ExplicitTop = 65
-            ExplicitWidth = 298
-            ExplicitHeight = 905
             object Label62: TLabel
               Left = 1
               Top = 1
@@ -1165,9 +1148,6 @@ object PultUpav: TPultUpav
               ReadOnly = True
               TabOrder = 0
               StyleElements = []
-              ExplicitLeft = -1
-              ExplicitTop = 308
-              ExplicitWidth = 296
             end
             object Memo16: TMemo
               Left = 1
@@ -1180,9 +1160,6 @@ object PultUpav: TPultUpav
               ReadOnly = True
               TabOrder = 1
               StyleElements = []
-              ExplicitLeft = -1
-              ExplicitTop = 42
-              ExplicitWidth = 296
             end
             object Memo17: TMemo
               Left = 1
@@ -1195,8 +1172,6 @@ object PultUpav: TPultUpav
               ReadOnly = True
               TabOrder = 2
               StyleElements = []
-              ExplicitLeft = -3
-              ExplicitTop = 166
             end
           end
         end
@@ -1711,8 +1686,6 @@ object PultUpav: TPultUpav
             Align = alClient
             TabOrder = 1
             Visible = False
-            ExplicitTop = 169
-            ExplicitHeight = 801
             object Label53: TLabel
               Left = 1
               Top = 1
@@ -1744,7 +1717,6 @@ object PultUpav: TPultUpav
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
-              ExplicitTop = 39
               ExplicitWidth = 85
             end
             object Label55: TLabel
@@ -1761,7 +1733,6 @@ object PultUpav: TPultUpav
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
-              ExplicitTop = 172
               ExplicitWidth = 85
             end
             object Label56: TLabel
@@ -1778,7 +1749,6 @@ object PultUpav: TPultUpav
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentFont = False
-              ExplicitTop = 305
               ExplicitWidth = 85
             end
             object Label59: TLabel
@@ -1885,7 +1855,6 @@ object PultUpav: TPultUpav
               ReadOnly = True
               TabOrder = 1
               StyleElements = []
-              ExplicitTop = 140
             end
             object Memo11: TMemo
               Left = 1
@@ -1925,8 +1894,6 @@ object PultUpav: TPultUpav
               ReadOnly = True
               TabOrder = 4
               StyleElements = []
-              ExplicitLeft = -3
-              ExplicitTop = 134
             end
             object Memo14: TMemo
               Left = 1
@@ -2101,8 +2068,6 @@ object PultUpav: TPultUpav
               ReadOnly = True
               TabOrder = 0
               StyleElements = []
-              ExplicitLeft = -1
-              ExplicitTop = 308
             end
             object Memo1: TMemo
               Left = 1
@@ -2116,8 +2081,6 @@ object PultUpav: TPultUpav
               ReadOnly = True
               TabOrder = 1
               StyleElements = []
-              ExplicitLeft = -1
-              ExplicitTop = 42
             end
             object Memo2: TMemo
               Left = 1
@@ -2559,9 +2522,9 @@ object PultUpav: TPultUpav
           object Label40: TLabel
             Left = 752
             Top = 3
-            Width = 303
+            Width = 383
             Height = 19
-            Caption = #1054#1073#1098#1077#1084' '#1089#1088#1077#1076#1089#1090#1074' '#1087#1086#1083#1091#1095#1077#1085#1085#1099#1093' '#1086#1090' '#1076#1086#1084#1086#1093#1086#1079#1103#1081#1089#1090#1074
+            Caption = #1054#1073#1098#1077#1084' '#1089#1088#1077#1076#1089#1090#1074' '#1087#1086#1083#1091#1095#1077#1085#1085#1099#1093' '#1086#1090' '#1076#1086#1084#1086#1093#1086#1079#1103#1081#1089#1090#1074'  ('#1084#1083#1085'. '#1088#1091#1073'.)'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -16
@@ -2643,9 +2606,9 @@ object PultUpav: TPultUpav
             Left = 552
             Top = 64
             Width = 757
-            Height = 81
+            Height = 105
             ColCount = 11
-            RowCount = 3
+            RowCount = 4
             TabOrder = 1
           end
         end

@@ -40,9 +40,21 @@ end;
  procedure ComboBox1Clickk;
 var i,k:integer;
 begin
-PultUpav.StringGrid5.Cells[0,0]:='Платные услуги';
-PultUpav.StringGrid5.Cells[0,1]:='Недвижимость';
-PultUpav.StringGrid5.Cells[0,2]:='Прочее';
+PultUpav.StringGrid5.Cells[1,0]:='1';
+PultUpav.StringGrid5.Cells[2,0]:='2';
+PultUpav.StringGrid5.Cells[3,0]:='3';
+PultUpav.StringGrid5.Cells[4,0]:='4';
+PultUpav.StringGrid5.Cells[5,0]:='5';
+PultUpav.StringGrid5.Cells[6,0]:='6';
+PultUpav.StringGrid5.Cells[7,0]:='7';
+PultUpav.StringGrid5.Cells[8,0]:='8';
+PultUpav.StringGrid5.Cells[9,0]:='9';
+PultUpav.StringGrid5.Cells[10,0]:='10';
+
+PultUpav.StringGrid5.Cells[0,0]:='Номер децили';
+PultUpav.StringGrid5.Cells[0,1]:='Платные услуги';
+PultUpav.StringGrid5.Cells[0,2]:='Недвижимость';
+PultUpav.StringGrid5.Cells[0,3]:='Прочее';
   XlsStart;
   FXlsApp.Visible := false;
     FXlsApp.WorkBooks.open(ExtractFilePath(Application.ExeName)+'Модель\Модель Домохозяйств.xlsm');
@@ -52,135 +64,135 @@ case strtoint(Trim(PultUpav.ComboBox1.Text)) of
 
 2016:
 begin
-for I := 0 to 2 do
+for I := 1 to 3 do
 for k := 1 to 10 do
-PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[37+i,2+k]);
+PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[37+i-1,2+k]);
 FXlsApp.ActiveWorkbook.Save;
 FXlsApp.ActiveWorkbook.Close;;
  end;
 
 2017:
 begin
-for I := 0 to 2 do
+for I := 1 to 3 do
 for k := 1 to 10 do
-PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[68+i,2+k]);
+PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[68+i-1,2+k]);
 FXlsApp.ActiveWorkbook.Save;
 FXlsApp.ActiveWorkbook.Close;;
  end;
 
 2018:
 begin
-for I := 0 to 2 do
+for I := 1 to 3 do
 for k := 1 to 10 do
-PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[100+i,2+k]);
+PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[100+i-1,2+k]);
 FXlsApp.ActiveWorkbook.Save;
 FXlsApp.ActiveWorkbook.Close;;
  end;
 
 2019:
 begin
-for I := 0 to 2 do
+for I := 1 to 3 do
 for k := 1 to 10 do
-PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[132+i,2+k]);
+PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[132+i-1,2+k]);
 FXlsApp.ActiveWorkbook.Save;
 FXlsApp.ActiveWorkbook.Close;;
  end;
 
  2020:
 begin
-for I := 0 to 2 do
+for I := 1 to 3 do
 for k := 1 to 10 do
-PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[164+i,2+k]);
+PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[164+i-1,2+k]);
 FXlsApp.ActiveWorkbook.Save;
 FXlsApp.ActiveWorkbook.Close;;
  end;
 
 2021:
 begin
-for I := 0 to 2 do
+for I := 1 to 3 do
 for k := 1 to 10 do
-PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[197+i,2+k]);
+PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[197+i-1,2+k]);
 FXlsApp.ActiveWorkbook.Save;
 FXlsApp.ActiveWorkbook.Close;;
  end;
 
 2022:
 begin
-for I := 0 to 2 do
+for I := 1 to 3 do
 for k := 1 to 10 do
-PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[229+i,2+k]);
+PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[229+i-1,2+k]);
 FXlsApp.ActiveWorkbook.Save;
 FXlsApp.ActiveWorkbook.Close;;
  end;
 
  2023:
 begin
-for I := 0 to 2 do
+for I := 1 to 3 do
 for k := 1 to 10 do
-PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[262+i,2+k]);
+PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[262+i-1,2+k]);
 FXlsApp.ActiveWorkbook.Save;
 FXlsApp.ActiveWorkbook.Close;;
  end;
 
 2024:
 begin
-for I := 0 to 2 do
+for I := 1 to 3 do
 for k := 1 to 10 do
-PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[295+i,2+k]);
+PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[295+i-1,2+k]);
 FXlsApp.ActiveWorkbook.Save;
 FXlsApp.ActiveWorkbook.Close;;
  end;
 
  2025:
 begin
-for I := 0 to 2 do
+for I := 1 to 3 do
 for k := 1 to 10 do
-PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[329+i,2+k]);
+PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[329+i-1,2+k]);
 FXlsApp.ActiveWorkbook.Save;
 FXlsApp.ActiveWorkbook.Close;;
  end;
 
 2026:
 begin
-for I := 0 to 2 do
+for I := 1 to 3 do
 for k := 1 to 10 do
-PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[362+i,2+k]);
+PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[362+i-1,2+k]);
 FXlsApp.ActiveWorkbook.Save;
 FXlsApp.ActiveWorkbook.Close;;
  end;
 
  2027:
 begin
-for I := 0 to 2 do
+for I := 1 to 3 do
 for k := 1 to 10 do
-PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[396+i,2+k]);
+PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[396+i-1,2+k]);
 FXlsApp.ActiveWorkbook.Save;
 FXlsApp.ActiveWorkbook.Close;;
  end;
 
  2028:
 begin
-for I := 0 to 2 do
+for I := 1 to 3 do
 for k := 1 to 10 do
-PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[430+i,2+k]);
+PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[430+i-1,2+k]);
 FXlsApp.ActiveWorkbook.Save;
 FXlsApp.ActiveWorkbook.Close;;
  end;
 
  2029:
 begin
-for I := 0 to 2 do
+for I := 1 to 3 do
 for k := 1 to 10 do
-PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[464+i,2+k]);
+PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[464+i-1,2+k]);
 FXlsApp.ActiveWorkbook.Save;
 FXlsApp.ActiveWorkbook.Close;;
  end;
 
  2030:
 begin
-for I := 0 to 2 do
+for I := 1 to 3 do
 for k := 1 to 10 do
-PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[497+i,2+k]);
+PultUpav.StringGrid5.Cells[k,i]:=FormatFloat('0.######',FXlsApp.Cells[497+i-1,2+k]);
 FXlsApp.ActiveWorkbook.Save;
 FXlsApp.ActiveWorkbook.Close;;
  end;
